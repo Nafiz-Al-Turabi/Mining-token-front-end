@@ -11,31 +11,31 @@ const navItems = [
   },
   {
     label: "Plans",
-    href: "/",
+    href: "/plans",
   },
   {
     label: "Rewards",
-    href: "/",
+    href: "/rewards",
   },
   {
     label: "About Us",
-    href: "/",
+    href: "/about-us",
   },
   {
     label: "App",
-    href: "/",
+    href: "/app",
   },
   {
     label: "Updates",
-    href: "/",
+    href: "/updates",
   },
   {
     label: "Guide",
-    href: "/",
+    href: "/guide",
   },
   {
     label: "Contact",
-    href: "/",
+    href: "/contact",
   },
 ];
 
