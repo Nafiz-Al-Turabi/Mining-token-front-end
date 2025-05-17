@@ -24,3 +24,20 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Custom css */
+.btn {
+  background: linear-gradient(
+    180deg,
+    var(--Green, #00e889) 0%,
+    #00824d 100%,
+    #008750 100%
+  );
+  box-shadow: -4px -4px 3px 0px rgba(0, 55, 33, 0.25) inset,
+    4px 4px 3px 0px rgba(0, 55, 33, 0.25) inset;
+}
+.btn-primary {
+  @apply py-[11px] px-6 rounded-full cursor-pointer text-white text-lg;
+}
+
+/* Navbar */
