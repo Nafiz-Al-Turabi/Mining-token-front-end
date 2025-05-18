@@ -1,0 +1,17 @@
+.border-right {
+  border-right: 1px solid;
+  border-top: 0 solid transparent;
+  border-left: 0 solid transparent;
+  border-bottom: 0 solid transparent;
+  border-image: linear-gradient(to bottom, #000000, #00e889, #000000) 1 100%;
+}
+.border-bottom {
+    border-bottom: 2px solid;
+    border-image-source: linear-gradient(to right, #000000, #00e889, #000000);
+    border-image-slice: 1;
+    border-image-width: 1;
+    border-image-outset: 0;
+    border-image-repeat: stretch;
+  }
+  
+  
