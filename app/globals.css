@@ -53,4 +53,5 @@ body {
   border-image: linear-gradient(to bottom, #00E889, #000a06) 1;
   border-width: 1px;
   border-style: solid;
+  background-image: linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%);
 }
