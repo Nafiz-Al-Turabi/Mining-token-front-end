@@ -48,7 +48,9 @@ const miningFeatures = [
 
 const WhatIsMining = () => {
   return (
-    <div className="bg-[#000503] py-10 lg:py-0">
+    <div className="bg-[#000503] py-10 lg:py-0 relative">
+        <img src="/images/homeImages/what is mining.svg" alt="" className="hidden md:block md:absolute -top-102 left-0" />
+        <img src="/images/homeImages/what is mining2.svg" alt="" className="hidden md:block md:absolute -top-72 right-0" />
       <div className="max-w-[1320px] mx-auto px-4">
         <h1 className="text-2xl lg:text-[4rem] font-semibold text-white text-center mb-16">
           What is{" "}
