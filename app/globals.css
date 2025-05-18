@@ -39,6 +39,10 @@ body {
 .btn-primary {
   @apply py-[11px] px-6 rounded-full cursor-pointer text-white text-lg;
 }
+.btn-primary:hover {
+  @apply bg-gradient-to-r from-[#00E889] to-[#00824d];
+}
+
 /* Hero Section */
 
 .bgrad {
@@ -49,6 +53,6 @@ body {
   background: #ffffff0d;
   border-radius: 8px;
   border: 1px solid #ffffff00;
-  background: linear-gradient(rgba(0, 0, 0, 0.966), rgba(0, 0, 0, 0.966));
+  background: linear-gradient(rgba(0, 27, 16, 0.966), rgba(0, 22, 10, 0.966));
   color: #0E0E0E;
 }
