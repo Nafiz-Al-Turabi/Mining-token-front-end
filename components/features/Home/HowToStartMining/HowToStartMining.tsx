@@ -33,14 +33,14 @@ const HowToStartMining = () => {
     >
       <div className="max-w-[1320px] mx-auto px-4">
         <div>
-          <h1 className="w-[24ch] mx-auto text-2xl lg:text-[4rem] font-semibold text-white text-center ">
+          <h1 className="sm:w-[24ch] mx-auto text-2xl lg:text-[4rem] font-semibold text-white text-center leading-[130%] ">
             How to Start{" "}
             <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
               Cloud Mining
             </span>{" "}
             in 3 Simple Steps
           </h1>
-          <p className="text-white text-center text-sm lg:text-l font-normal tracking-[0.12px] mt-4">
+          <p className="text-white text-center text-sm lg:text-lg font-normal tracking-[0.12px] mt-4">
             Lear how to quickly start your cloud mining investment and begin
             eaming profits effortlessly
           </p>

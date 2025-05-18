@@ -1,7 +1,7 @@
 import HeroSection from "@/components/features/Home/HeroSection/HeroSection";
 import WhatIsMining from "@/components/features/Home/WhatIsMining/WhatIsMining";
 import HowToStartMining from "@/components/features/Home/HowToStartMining/HowToStartMining";
-import React from "react";
+import Plan from "@/components/features/Home/Plan/Plan";
 
 export default function MainPage() {
   return (
@@ -9,6 +9,7 @@ export default function MainPage() {
       <HeroSection />
       <WhatIsMining />
       <HowToStartMining />
+      <Plan />
     </div>
   );
 }
