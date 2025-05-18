@@ -39,5 +39,16 @@ body {
 .btn-primary {
   @apply py-[11px] px-6 rounded-full cursor-pointer text-white text-lg;
 }
+/* Hero Section */
 
+.bgrad {
+  @apply h-[1px] w-[70%] bg-gradient-to-l from-[#00E889]/20 via-[#ffffff] to-[#00E889]/20 absolute -bottom-[1px] left-1/2 -translate-x-1/2;
+}
 /* Navbar */
+.test {
+  background: #ffffff0d;
+  border-radius: 8px;
+  border: 1px solid #ffffff00;
+  background: linear-gradient(rgba(0, 0, 0, 0.966), rgba(0, 0, 0, 0.966));
+  color: #0E0E0E;
+}
