@@ -43,6 +43,21 @@ body {
   @apply bg-gradient-to-r from-[#00E889] to-[#00824d];
 }
 
+.card-btn {
+  @apply w-full border border-[#00E889] hover:border-[#008750] text-[#00E889] hover:text-white py-2 px-4 rounded-full mt-4 uppercase cursor-pointer;
+  transition: all 0.3s ease-in-out;
+}
+.card-btn:hover {
+  background: linear-gradient(
+    180deg,
+    var(--Green, #00e889) 0%,
+    #00824d 100%,
+    #008750 100%
+  );
+  box-shadow: -4px -4px 3px 0px rgba(0, 55, 33, 0.25) inset,
+    4px 4px 3px 0px rgba(0, 55, 33, 0.25) inset;
+}
+
 /* Hero Section */
 
 .bgrad {
@@ -50,7 +65,7 @@ body {
 }
 /* Navbar */
 .test1 {
-  border-image: linear-gradient(to bottom, #00E889, #000a06) 1;
+  border-image: linear-gradient(to bottom, #00e889, #000a06) 1;
   border-width: 1px;
   border-style: solid;
   background-image: linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%);
