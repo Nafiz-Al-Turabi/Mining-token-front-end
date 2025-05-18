@@ -145,7 +145,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <div
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 27, 16, 0.966), rgba(0, 22, 10, 0.966)), url(${noice.src})`,
+          backgroundImage: `linear-gradient(rgba(0, 27, 16, 0.900), rgba(0, 22, 10, 0.900)), url(${noice.src})`,
         }}
         className={`bg-cover mobile-menu fixed top-0 right-0 bottom-0 w-[75%] max-w-[300px] bg-black z-50 transition-transform duration-300 ease-in-out transform lg:hidden ${
           isMenuOpen ? "translate-x-0" : "translate-x-full"
