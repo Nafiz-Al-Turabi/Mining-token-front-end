@@ -52,6 +52,7 @@ const HeroSection = () => {
                 <div className="flex -space-x-3 sm:-space-x-4 lg:-space-x-5">
                   {Array.from({ length: 5 }).map((_, index) => (
                     <Image
+                      key={index}
                       src="/images/user.png"
                       alt="user-icon"
                       width={100}
