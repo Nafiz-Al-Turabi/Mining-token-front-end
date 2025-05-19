@@ -118,11 +118,11 @@ const Navbar = () => {
 
         {/* Mobile Controls */}
         <div className="flex items-center gap-1 lg:hidden">
-          <button className="btn py-1 px-8 rounded-full cursor-pointer text-white text-lg">
+          <button className="btn py-1 px-2 sm:px-8 border border-[#00E889]/20 rounded-full cursor-pointer text-white text-lg">
             Login
           </button>
           <button className="flex items-center gap-2 text-lg text-[#E9E9EA] cursor-pointer">
-            <FaGlobe size={24} className="text-[#00e889]" />
+            <FaGlobe size={24} className="text-[#fff]" />
           </button>
           <button
             className="menu-toggle text-white"

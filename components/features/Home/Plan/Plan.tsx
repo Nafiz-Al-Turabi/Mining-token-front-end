@@ -19,16 +19,16 @@ const Plan = () => {
             stable returns and cutting-edge technology
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
-          <PlanCard />
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 ">
+          <PlanCard soldOut = {false} />
+          <PlanCard soldOut = {true} />
+          <PlanCard soldOut = {true} />
+          <PlanCard soldOut = {false} />
+          <PlanCard soldOut = {true} />
+          <PlanCard soldOut = {false} />
+          <PlanCard soldOut = {true} />
+          <PlanCard soldOut = {false} />
+          <PlanCard soldOut = {true} />
         </div>
       </div>
     </div>

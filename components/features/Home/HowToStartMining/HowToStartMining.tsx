@@ -45,19 +45,19 @@ const HowToStartMining = () => {
             eaming profits effortlessly
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 mt-16">
+        <div className="flex flex-col sm:flex-row gap-6 mt-16">
           {data.map((item, index) => (
             <div
               key={item.id}
               style={{
                 backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
               }}
-              className={`bg-white/20 bg-cover bg-center bg-no-repeat backdrop-blur-3xl rounded-2xl p-4 relative overflow-hidden ${index === 1 ? "border-b border-[#165a3e]" : ""}`}
+              className={`bg-white/20 bg-cover bg-center bg-no-repeat backdrop-blur-3xl rounded-2xl p-4 relative overflow-hidden group ${index === 1 ? "border-b border-[#165a3e]" : ""}`}
             >
                {
-                index === 1 ?  <div className="h-[1px] w-[70%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-0 left-1/2 -translate-x-1/2"></div> :""
+                index === 1 ?  <div className="h-[1px] w-[70%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-0 left-1/2 -translate-x-1/2 group-hover:w-[100%] transition-all duration-300"></div> :""
                }
-              <div className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute ${index === 1 ? "-bottom-40 -right-40":"-top-40 -right-40"} blur-[150px] opacity-[0.1]`}></div>
+              <div className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute ${index === 1 ? "-bottom-40 -right-40":"-top-40 -right-40"} blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}></div>
               <div className="w-[69px] h-[69px] bg-white/10 backdrop-blur-3xl border border-[#424242] rounded-full flex items-center justify-center relative overflow-hidden">
                 <p className="h-14 w-14 bg-[#00E889] rounded-full absolute -bottom-10 blur-[20px] opacity-[0.1]"></p>
                 <p className="text-[1.68rem] font-bold text-stroke">
