@@ -31,9 +31,9 @@ const HowToStartMining = () => {
       style={{ backgroundImage: `radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.911) 50%), url(${backgroundImage.src})` }}
       className=" bg-cover bg-center bg-no-repeat relative py-25"
     >
-      <div className="max-w-[1320px] mx-auto px-4">
+      <div className="max-w-[1320px] mx-auto px-4 2xl:px-0">
         <div>
-          <h1 className="sm:w-[24ch] mx-auto text-2xl lg:text-[4rem] font-semibold text-white text-center leading-[130%] ">
+          <h1 className="sm:w-[24ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center leading-[130%] ">
             How to Start{" "}
             <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
               Cloud Mining
@@ -45,7 +45,7 @@ const HowToStartMining = () => {
             eaming profits effortlessly
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 mt-16">
+        <div className="flex flex-col sm:flex-row gap-4 mt-16">
           {data.map((item, index) => (
             <div
               key={item.id}

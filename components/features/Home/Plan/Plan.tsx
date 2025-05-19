@@ -1,12 +1,13 @@
-import noice from "@/public/noice.jpg";
-import doller from "@/public/images/homeImages/doller.svg";
+import PlanCard from "@/components/ui/Cards/PlanCard";
 
 const Plan = () => {
   return (
-    <div className="bg-[#000503] py-15">
-      <div className="max-w-[1320px] mx-auto px-4">
+    <div className="bg-[#000503] py-15 relative">
+      <img src="/images/homeImages/plan-tech.svg" alt="" className="hidden md:block md:absolute -top-52 left-0" />
+      <img src="/images/homeImages/plan-tech2.svg" alt="" className="hidden md:block md:absolute -top-102 right-0" />
+      <div className="max-w-[1320px] mx-auto px-4 2xl:px-0">
         <div className="mb-16">
-          <h1 className="sm:w-[24ch] mx-auto text-2xl lg:text-[4rem] font-semibold text-white text-center leading-[130%]">
+          <h1 className="sm:w-[24ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center leading-[130%]">
             Select your{" "}
             <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
               mining plan
@@ -18,52 +19,16 @@ const Plan = () => {
             stable returns and cutting-edge technology
           </p>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
-          <div
-            style={{
-              backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
-            }}
-            className="bg-[#010101f3] rounded-2xl p-4 bg-cover bg-center relative overflow-hidden"
-          >
-            <div className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -bottom-50 -left-50 blur-[150px] opacity-[0.1]`}></div>
-            <div className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -top-50 -right-50 blur-[150px] opacity-[0.1]`}></div>
-            <div className="flex justify-center">
-              <img src={doller.src} alt="dollar" />
-            </div>
-            <div className="text-center my-6">
-              <h2 className="text-lg sm:text-2xl font-semibold text-white">
-                Wind-126TH【Flash Sale】
-              </h2>
-              <p className="text-white text-xl sm:text-[2rem] font-semibold">
-                $3,800.00
-              </p>
-            </div>
-            <ul className="space-y-2 mb-6">
-              <li className="flex justify-between border border-[#ffffff0d] p-2 rounded-lg">
-                <p className="flex items-center gap-2">
-                  <span><img src="/images/homeImages/check.svg" alt="check" /></span>Daily Rewards
-                </p>
-                <p>$3,800.00</p>
-              </li>
-              <li className="flex justify-between border border-[#ffffff0d] p-2 rounded-lg">
-                <p className="flex items-center gap-2">
-                  <span><img src="/images/homeImages/check.svg" alt="check" /></span>Total Earnings
-                </p>
-                <p>$3,800.00</p>
-              </li>
-              <li className="flex justify-between border border-[#ffffff0d] p-2 rounded-lg">
-                <p className="flex items-center gap-2">
-                  <span><img src="/images/homeImages/check.svg" alt="check" /></span>Matured Amount
-                </p>
-                <p>$3,800.00</p>
-              </li>
-            </ul>
-
-            <button className="card-btn">
-                Invest Now
-            </button>
-
-          </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-2">
+          <PlanCard />
+          <PlanCard />
+          <PlanCard />
+          <PlanCard />
+          <PlanCard />
+          <PlanCard />
+          <PlanCard />
+          <PlanCard />
+          <PlanCard />
         </div>
       </div>
     </div>
