@@ -90,7 +90,7 @@ const Navbar = () => {
   return (
     <div className="fixed  left-0 right-0 z-50 top-6 px-4  ">
       <div className="max-w-[1320px] mx-auto bg-[#ffffff0d] backdrop-blur-lg border border-[#424242] rounded-full flex justify-between items-center px-4 lg:px-6 py-3 lg:py-4 relative overflow-visible">
-        <div className="h-[0.5px] w-[50%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#00E889] to-[#00E88900] absolute -top-[1px] left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+        <div className="h-[1px] w-[50%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#00E889] to-[#00E88900] absolute -top-[1px] left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <div className="h-[1px] w-[50%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#00E889] to-[#00E88900] absolute -bottom-[1px] left-1/2 -translate-x-1/2"></div>
 
         <Link href="/">

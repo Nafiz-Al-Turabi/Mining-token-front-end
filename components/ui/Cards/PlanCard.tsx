@@ -8,8 +8,9 @@ const PlanCard = ({ soldOut }: { soldOut: boolean }) => {
         style={{
           backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
         }}
-        className="bg-[#010101f3] rounded-2xl p-4 bg-cover bg-center relative overflow-hidden group"
+        className="bg-[#010101f3] rounded-[18px] p-4 bg-cover bg-center relative overflow-hidden group border-b border-[#00e88744]"
       >
+        <div className="h-[2px] w-[70%] bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-[1px] left-1/2 -translate-x-1/2"></div>
         <div
           className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -bottom-50 -left-50 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
         ></div>

@@ -41,7 +41,7 @@ const HowToStartMining = () => {
             in 3 Simple Steps
           </h1>
           <p className="text-white text-center text-sm lg:text-lg font-normal tracking-[0.12px] mt-4">
-            Lear how to quickly start your cloud mining investment and begin
+            Learn how to quickly start your cloud mining investment and begin
             eaming profits effortlessly
           </p>
         </div>
