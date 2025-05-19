@@ -13,7 +13,7 @@ const HeroSection = () => {
       <div className="max-w-[1320px] mx-auto flex flex-col justify-center h-full px-4 2xl:px-0">
         <div className="flex relative xl:mt-32">
           <div>
-            <h1 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] xl:text-7xl font-bold text-center lg:text-left mb-4 uppercase leading-[120%] lg:w-[20ch]">
+            <h1 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] xl:text-7xl font-bold text-center lg:text-left mb-4 uppercase leading-[120%] lg:w-[16ch]">
               HEXMIN{" "}
               <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
                 ERSTART

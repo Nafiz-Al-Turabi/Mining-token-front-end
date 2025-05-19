@@ -33,7 +33,7 @@ const HowToStartMining = () => {
     >
       <div className="max-w-[1320px] mx-auto px-4 2xl:px-0">
         <div>
-          <h1 className="sm:w-[24ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center leading-[130%] ">
+          <h1 className="sm:w-[20ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center leading-[130%] ">
             How to Start{" "}
             <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
               Cloud Mining
