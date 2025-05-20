@@ -3,6 +3,7 @@ import React, { useCallback, useState } from "react";
 import { LuChevronDown } from "react-icons/lu";
 import faqimage from "@/public/images/homeImages/FAQ.png";
 import noice from "@/public/noice.jpg";
+import { GoPlus } from "react-icons/go";
 
 const faqData = [
   {
@@ -83,7 +84,7 @@ const FAQ = () => {
                     className={`${openIndex === index ? "h-[5px] blur-[5px]" : "h-[2px]"} w-[70%] bg-gradient-to-l from-[#ffffff09] via-[#ffffff] to-[#ffffff09] absolute -bottom-[1px] left-1/2 -translate-x-1/2`}
                   ></div>
                   <div
-                    className={`h-[240px] w-[240px]   absolute  left-1/2 -translate-x-1/2  ${openIndex === index ? "opacity-[1] bg-[#030c08] top-0 blur-[100px] w-[540px] " : "rounded-full opacity-[0.1] bg-[#1c8f60] blur-[150px] -top-40"} transition-all duration-300`}
+                    className={`h-[400px] w-[400px]   absolute  left-1/2 -translate-x-1/2  ${openIndex === index ? "opacity-[1] bg-[#030c08] top-0 blur-[100px] w-[540px] " : "rounded-full opacity-[0.1] bg-[#1c8f60] blur-[150px] -top-40"} transition-all duration-300`}
                   ></div>
                   <button
                     onClick={() => toggleAccordion(index)}
@@ -91,11 +92,11 @@ const FAQ = () => {
                   >
                     <span>{item.question}</span>
                     <span
-                      className={`text-2xl transform transition-transform ${
-                        openIndex === index ? "rotate-180 text-[#00e889]" : ""
+                      className={`text-2xl text-[#00e889] transform transition-transform ${
+                        openIndex === index ? "rotate-45 " : ""
                       }`}
                     >
-                      <LuChevronDown />
+                      <GoPlus size={28} />
                     </span>
                   </button>
                   <div
