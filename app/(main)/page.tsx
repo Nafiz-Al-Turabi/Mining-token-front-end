@@ -3,6 +3,7 @@ import WhatIsMining from "@/components/features/Home/WhatIsMining/WhatIsMining";
 import HowToStartMining from "@/components/features/Home/HowToStartMining/HowToStartMining";
 import Plan from "@/components/features/Home/Plan/Plan";
 import OperatingPrinciple from "@/components/features/Home/OperatingPrinciple/OperatingPrinciple";
+import OurBusinessModel from "@/components/features/Home/OurBusinessModel/OurBusinessModel";
 export default function MainPage() {
   return (
     <div>
@@ -11,6 +12,7 @@ export default function MainPage() {
       <HowToStartMining />
       <Plan />
       <OperatingPrinciple />
+      <OurBusinessModel />
     </div>
   );
 }
