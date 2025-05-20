@@ -1,3 +1,4 @@
+import BusinessCard from "@/components/ui/Cards/BusinessCard";
 import React from "react";
 
 const OurBusinessModel = () => {
@@ -14,6 +15,9 @@ const OurBusinessModel = () => {
           <p className="text-white text-center text-sm lg:text-lg font-normal tracking-[0.12px] mt-4">
             HHEXminer is your best choice for cryptocurrency investment
           </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+          <BusinessCard />
         </div>
       </div>
     </div>
