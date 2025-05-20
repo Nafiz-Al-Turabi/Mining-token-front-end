@@ -1,10 +1,61 @@
+"use client";
+
 import BusinessCard from "@/components/ui/Cards/BusinessCard";
 import React from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
+const CustomNextArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      className="absolute bottom-[-80px] right-[calc(50%-60px)] text-[#00E889] border border-[#00E889] hover:bg-[#00E889] hover:text-white p-2.5 rounded-full z-10 cursor-pointer"
+    >
+      <IoIosArrowForward size={28} />
+    </button>
+  );
+};
+
+const CustomPrevArrow = (props: any) => {
+  const { onClick } = props;
+  return (
+    <button
+      onClick={onClick}
+      className="absolute bottom-[-80px] left-[calc(50%-60px)] text-[#00E889] border border-[#00E889] hover:bg-[#00E889] hover:text-white p-2.5 rounded-full z-10 cursor-pointer"
+    >
+      <IoIosArrowBack size={28} />
+    </button>
+  );
+};
 
 const OurBusinessModel = () => {
+  const settings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    arrows: true,
+    nextArrow: <CustomNextArrow />,
+    prevArrow: <CustomPrevArrow />,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 },
+      },
+    ],
+  };
+
   return (
     <div className="bg-[#000503] py-10 lg:py-0 relative">
-      <div className="max-w-[1320px] mx-auto pb-25 px-4 2xl:px-0">
+      <div className="max-w-[1320px] mx-auto pb-25 ">
         <div>
           <h1 className="sm:w-[20ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center leading-[130%]">
             Our business{" "}
@@ -16,8 +67,25 @@ const OurBusinessModel = () => {
             HHEXminer is your best choice for cryptocurrency investment
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
-          <BusinessCard />
+
+        <div className="relative mt-16 ">
+          <Slider {...settings}>
+            <div className="px-3">
+              <BusinessCard />
+            </div>
+            <div className="px-3">
+              <BusinessCard />
+            </div>
+            <div className="px-3">
+              <BusinessCard />
+            </div>
+            <div className="px-3">
+              <BusinessCard />
+            </div>
+            <div className="px-3">
+              <BusinessCard />
+            </div>
+          </Slider>
         </div>
       </div>
     </div>
