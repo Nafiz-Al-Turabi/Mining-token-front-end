@@ -5,6 +5,7 @@ import Plan from "@/components/features/Home/Plan/Plan";
 import OperatingPrinciple from "@/components/features/Home/OperatingPrinciple/OperatingPrinciple";
 import OurBusinessModel from "@/components/features/Home/OurBusinessModel/OurBusinessModel";
 import RecentDepositsWithdraws from "@/components/features/Home/RecentDepositsWithdraws/RecentDepositsWithdraws";
+import News from "@/components/features/Home/news/news";
 export default function MainPage() {
   return (
     <div>
@@ -15,6 +16,7 @@ export default function MainPage() {
       <OperatingPrinciple />
       <OurBusinessModel />
       <RecentDepositsWithdraws />
+      <News />
     </div>
   );
 }
