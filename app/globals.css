@@ -73,5 +73,5 @@ body {
 }
 /* Navbar */
 .test1 {
-  background: linear-gradient(45deg, #1ff0763b 10%, #00110962 10%, #1ff07648 50%)
+  background: linear-gradient(circle at center, rgba(0, 229, 137, 0.3), rgb(0, 5, 3))
 }
