@@ -22,6 +22,9 @@ const news = () => {
           <NewsCard />
           <NewsCard />
         </div>
+        <div className="flex justify-center mt-10">
+            <button className="btn btn-primary ">View All</button>
+        </div>
       </div>
     </div>
   );
