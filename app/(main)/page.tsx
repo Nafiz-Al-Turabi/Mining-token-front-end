@@ -4,6 +4,7 @@ import HowToStartMining from "@/components/features/Home/HowToStartMining/HowToS
 import Plan from "@/components/features/Home/Plan/Plan";
 import OperatingPrinciple from "@/components/features/Home/OperatingPrinciple/OperatingPrinciple";
 import OurBusinessModel from "@/components/features/Home/OurBusinessModel/OurBusinessModel";
+import RecentDepositsWithdraws from "@/components/features/Home/RecentDepositsWithdraws/RecentDepositsWithdraws";
 export default function MainPage() {
   return (
     <div>
@@ -13,6 +14,7 @@ export default function MainPage() {
       <Plan />
       <OperatingPrinciple />
       <OurBusinessModel />
+      <RecentDepositsWithdraws />
     </div>
   );
 }

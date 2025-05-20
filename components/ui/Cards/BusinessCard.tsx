@@ -4,7 +4,6 @@ import Image from "next/image";
 import businessImage from "@/public/images/homeImages/business.png";
 import figmaIcon from "@/public/images/homeImages/figma.svg";
 import noice from "@/public/noice.jpg";
-import { FaArrowRight } from "react-icons/fa";
 import { IoArrowForwardOutline } from "react-icons/io5";
 
 export default function BusinessCard() {
