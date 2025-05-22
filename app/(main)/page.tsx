@@ -7,6 +7,7 @@ import OurBusinessModel from "@/components/features/Home/OurBusinessModel/OurBus
 import RecentDepositsWithdraws from "@/components/features/Home/RecentDepositsWithdraws/RecentDepositsWithdraws";
 import News from "@/components/features/Home/news/news";
 import FAQ from "@/components/features/Home/FAQ/FAQ";
+import AboutCompany from "@/components/features/Home/AboutCompany/AboutCompany";
 export default function MainPage() {
   return (
     <div>
@@ -19,6 +20,7 @@ export default function MainPage() {
       <RecentDepositsWithdraws />
       <News />
       <FAQ />
+      <AboutCompany />
     </div>
   );
 }
