@@ -28,7 +28,7 @@ export default function NewsCard() {
         />
       </div>
       <div className="mt-4">
-        <h3 className="text-base md:text-2xl font-semibold leading-snug mb-4">
+        <h3 className="text-base lg:text-2xl font-semibold leading-snug mb-4">
           Trump’s World Liberty Financial Proposes Integration with Aave for
           DeFi Platform Launch
         </h3>

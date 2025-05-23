@@ -40,8 +40,8 @@ const FAQ = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
   return (
-    <div className="bg-[#000503] pt-[60px] pb-25">
-      <div className="max-w-[1320px] mx-auto px-4 flex justify-between gap-16">
+    <div className="bg-[#000503] xl:pt-[60px] pb-25">
+      <div className="max-w-[1320px] mx-auto px-4 flex flex-col md:flex-row justify-between gap-16">
         <div
           style={{
             backgroundImage: `
@@ -49,23 +49,23 @@ const FAQ = () => {
       url(${faqimage.src})
     `,
           }}
-          className="bg-cover bg-center bg-no-repeat w-1/2 h-[600px] relative"
+          className="bg-cover bg-center bg-no-repeat w-full md:w-1/2 h-0 md:h-[600px] relative"
         >
           <div className="absolute inset-0"></div>
-          <h1 className="sm:w-[20ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white leading-[130%] relative z-10">
+          <h1 className="sm:w-[20ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] text-center md:text-left font-semibold text-white leading-[130%] relative z-10">
             Frequently Asked{" "}
             <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
               Questions
             </span>
           </h1>
-          <p className="text-white text-sm lg:text-lg font-normal tracking-[0.12px] mt-4 relative z-10">
+          <p className="text-white text-sm lg:text-lg font-normal tracking-[0.12px] mt-4 relative z-10 text-center md:text-left">
             We answer some of your Frequently Asked Questions regarding our
             platform. If you have a query that is not answered here, Please
             contact us.
           </p>
         </div>
 
-        <section className="w-1/2 ">
+        <section className="w-full md:w-1/2 mt-22 lg:mt-0">
           <div className="max-w-2xl mx-auto">
             <div className="space-y-4">
               {faqData.map((item, index) => (
