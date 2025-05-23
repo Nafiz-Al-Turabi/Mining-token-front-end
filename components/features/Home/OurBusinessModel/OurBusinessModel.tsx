@@ -54,7 +54,7 @@ const OurBusinessModel = () => {
   };
 
   return (
-    <div className="bg-[#000503] py-0 lg:py-0 relative">
+    <div className="bg-[#000503] py-0 lg:py-0 relative ">
       <img src="/images/bgSvgs/our business1.svg" alt="" className="hidden md:block md:absolute -top-46 left-0 z-10" />
       <img src="/images/bgSvgs/our business2.svg" alt="" className="hidden md:block md:absolute -top-96 right-0 z-10" />
       <div className="max-w-[1320px] mx-auto pb-25 ">
@@ -65,7 +65,7 @@ const OurBusinessModel = () => {
               model
             </span>
           </h1>
-          <p className="text-white text-center text-sm lg:text-lg font-normal tracking-[0.12px] mt-4">
+          <p className="text-white text-center text-sm lg:text-lg font-normal tracking-[0.12px] mt-4 px-6">
             HHEXminer is your best choice for cryptocurrency investment
           </p>
         </div>

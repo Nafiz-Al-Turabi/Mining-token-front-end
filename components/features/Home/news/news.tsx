@@ -17,12 +17,12 @@ const news = () => {
             HEXminer is your best choice for cryptocurrency investment
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 md:mt-16">
           <NewsCard />
           <NewsCard />
           <NewsCard />
         </div>
-        <div className="flex justify-center mt-10">
+        <div className="flex justify-center mt-6 md:mt-10">
             <button className="btn btn-primary ">View All</button>
         </div>
       </div>
