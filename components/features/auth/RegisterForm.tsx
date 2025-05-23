@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import bgIamge from "@/public/images/authImages/login-bg.jpg";
 import noice from "@/public/noice.jpg";
+import Link from "next/link";
 
 const RegisterForm = () => {
   const { register, handleSubmit } = useForm();
@@ -114,9 +115,9 @@ const RegisterForm = () => {
 
             <p className="text-center text-sm md:text-lg ">
               Already have an account?{" "}
-              <a href="#" className="text-[#00e889] hover:underline">
+              <Link href="/login" className="text-[#00e889] hover:underline">
                 Login
-              </a>
+              </Link>
             </p>
           </div>
         </div>

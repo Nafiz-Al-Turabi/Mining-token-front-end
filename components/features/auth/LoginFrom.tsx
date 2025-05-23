@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
 import bgIamge from '@/public/images/authImages/login-bg.jpg'
 import noice from '@/public/noice.jpg'
+import Link from 'next/link';
 
 
 const LoginFrom = () => {
@@ -94,9 +95,9 @@ const LoginFrom = () => {
 
           <p className="text-center text-sm md:text-lg ">
             Don’t have any account?{" "}
-            <a href="#" className="text-[#00e889] hover:underline">
+            <Link href="/register" className="text-[#00e889] hover:underline">
               Sign Up
-            </a>
+            </Link>
           </p>
         </div>
       </div>
