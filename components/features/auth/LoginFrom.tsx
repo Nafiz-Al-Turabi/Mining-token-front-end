@@ -3,6 +3,8 @@
 import { useForm } from 'react-hook-form';
 import { useState } from 'react';
 import { FaEye, FaEyeSlash } from 'react-icons/fa';
+import bgIamge from '@/public/images/authImages/login-bg.jpg'
+
 
 const LoginFrom = () => {
   const { register, handleSubmit } = useForm();
@@ -12,21 +14,21 @@ const LoginFrom = () => {
     console.log(data);
   };
   return (
-    <div>
+    <div style={{ backgroundImage: `radial-gradient(68.23% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%),url(${bgIamge.src})` }} className='bg-cover bg-center bg-no-repeat'>
       {" "}
-      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-zinc-900 to-zinc-800 p-4">
-        <div className="bg-zinc-900 p-8 rounded-3xl shadow-lg w-full max-w-md text-white space-y-6">
+      <div className="min-h-screen flex items-center justify-center bg-gradient-to-br  p-4">
+        <div className="bg-zinc-900 p-8 rounded-3xl shadow-lg w-full max-w-2xl text-white space-y-6">
           <div className="text-center">
             <div className="flex justify-center mb-2">
-              <img src="/logo.png" alt="MiningToken" className="h-8" />{" "}
+              <img src="/logo.svg" alt="MiningToken" className="h-8" />{" "}
               {/* Replace with your logo */}
             </div>
-            <h2 className="text-2xl font-semibold">Welcome To</h2>
+            <h2 className="text-[2.5rem] font-semibold">Welcome To</h2>
           </div>
 
-          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
+          <form onSubmit={handleSubmit(onSubmit)} className="space-y-5 relative z-10">
             <div>
-              <label className="block text-sm mb-1" htmlFor="email">
+              <label className="block text-lg mb-3" htmlFor="email">
                 Email
               </label>
               <input
@@ -34,28 +36,28 @@ const LoginFrom = () => {
                 id="email"
                 {...register("email")}
                 placeholder="example@gmail.com"
-                className="w-full px-4 py-2 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-green-400"
+                className="w-full p-4 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:border focus:border-[#00e889]"
                 required
               />
             </div>
 
             <div className="relative">
-              <label className="block text-sm mb-1" htmlFor="password">
+              <label className="block text-lg mb-3" htmlFor="password">
                 Password
               </label>
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
                 {...register("password")}
-                placeholder="***********"
-                className="w-full px-4 py-2 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:ring-2 focus:ring-green-400"
+                placeholder="Enter your password"
+                className="w-full p-4 rounded-lg bg-zinc-800 text-white border border-zinc-700 focus:outline-none focus:border focus:border-[#00e889]"
                 required
               />
               <span
-                className="absolute right-4 top-[38px] cursor-pointer text-zinc-400"
+                className="absolute right-4 bottom-[1.1rem] cursor-pointer text-zinc-400"
                 onClick={() => setShowPassword(!showPassword)}
               >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
+                {showPassword ? <FaEyeSlash size={24} /> : <FaEye size={24} />}
               </span>
             </div>
 
@@ -63,19 +65,19 @@ const LoginFrom = () => {
               <label className="flex items-center space-x-2">
                 <input
                   type="checkbox"
-                  className="accent-green-500"
+                  className="accent-[#00e889] "
                   {...register("remember")}
                 />
-                <span>Remember Me</span>
+                <span className='text-lg'>Remember Me</span>
               </label>
-              <a href="#" className="text-orange-500 hover:underline">
+              <a href="#" className="text-lg text-orange-500 hover:underline">
                 Forget Password
               </a>
             </div>
 
             <button
               type="submit"
-              className="w-full bg-gradient-to-r from-green-400 to-green-600 py-2 rounded-full text-white font-semibold hover:opacity-90"
+              className="btn btn-primary w-full mt-4 "
             >
               Login
             </button>
@@ -83,7 +85,7 @@ const LoginFrom = () => {
 
           <p className="text-center text-sm">
             Don’t have any account?{" "}
-            <a href="#" className="text-green-400 hover:underline">
+            <a href="#" className="text-[#00e889] hover:underline">
               Sign Up
             </a>
           </p>
