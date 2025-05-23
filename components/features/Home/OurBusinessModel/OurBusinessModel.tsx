@@ -12,7 +12,7 @@ const CustomNextArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className="absolute bottom-[-80px] right-[calc(50%-60px)] text-[#00E889] border border-[#00E889] hover:bg-[#00E889] hover:text-white p-2.5 rounded-full z-10 cursor-pointer"
+      className="absolute bottom-[-70px] right-[calc(50%-50px)] lg:right-[calc(50%-60px)] text-[#00E889] border border-[#00E889] hover:bg-[#00E889] hover:text-white p-2.5 rounded-full z-10 cursor-pointer"
     >
       <IoIosArrowForward className="text-base  lg:text-3xl " />
     </button>
@@ -24,7 +24,7 @@ const CustomPrevArrow = (props: any) => {
   return (
     <button
       onClick={onClick}
-      className="absolute bottom-[-80px] left-[calc(50%-60px)] text-[#00E889] border border-[#00E889] hover:bg-[#00E889] hover:text-white p-2.5 rounded-full z-10 cursor-pointer"
+      className="absolute bottom-[-70px] left-[calc(50%-50px)] lg:left-[calc(50%-60px)] text-[#00E889] border border-[#00E889] hover:bg-[#00E889] hover:text-white p-2.5 rounded-full z-10 cursor-pointer"
     >
       <IoIosArrowBack className="text-base  lg:text-3xl " />
     </button>
