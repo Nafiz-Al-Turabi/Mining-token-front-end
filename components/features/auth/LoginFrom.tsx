@@ -16,12 +16,14 @@ const LoginFrom = () => {
     console.log(data);
   };
   return (
-    <div style={{ backgroundImage: `radial-gradient(68.23% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%),url(${bgIamge.src})` }} className='bg-cover bg-center bg-no-repeat'>
+    <div style={{ backgroundImage: `radial-gradient(68.23% 50% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%),url(${bgIamge.src})` }} className='bg-cover bg-center bg-no-repeat relative'>
+      
       {" "}
       <div className="min-h-screen flex items-center justify-center bg-gradient-to-br p-4 mt-20 md:mt-0">
         <div style={{
         backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
       }} className="bg-cover bg-center px-4 py-8 md:p-8 rounded-3xl shadow-lg w-full max-w-2xl text-white space-y-6 relative overflow-hidden">
+        <div className="h-[1px] w-[70%] bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-6 left-1/2 -translate-x-1/2"></div>
         <div
         className={`h-[800px] w-[800px] bg-[#00E889] rounded-full absolute -top-100 -left-100 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-200`}
       ></div>

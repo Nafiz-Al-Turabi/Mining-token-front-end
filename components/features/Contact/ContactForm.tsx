@@ -33,6 +33,7 @@ const ContactForm = () => {
             }}
             className="bg-cover bg-center px-4 py-8 md:p-8 rounded-3xl shadow-lg w-full max-w-[868px] text-white space-y-6 relative overflow-hidden"
           >
+            <div className="h-[1px] w-[70%] bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-6 left-1/2 -translate-x-1/2"></div>
             <div
               className={`h-[800px] w-[800px] bg-[#00E889] rounded-full absolute -top-100 -left-100 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-200`}
             ></div>
