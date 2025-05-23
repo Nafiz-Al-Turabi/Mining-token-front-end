@@ -89,7 +89,11 @@ const Card = ({ item }: { item: any }) => (
 
     {/* Content */}
     <div>
-      <img src={item.image} alt={item.title} className="mb-[32px] max-h-[100px] h-12 w-12 lg:h-20 lg:w-20" />
+      <img
+        src={item.image}
+        alt={item.title}
+        className="mb-[32px] max-h-[100px] h-12 w-12 lg:h-20 lg:w-20"
+      />
       <h3 className="text-lg sm:text-[1.5rem] mb-2 text-white">{item.title}</h3>
       <p className="text-sm lg:text-base text-[#e2e2e2]">{item.description}</p>
     </div>
@@ -151,9 +155,15 @@ const OperatingPrinciple = () => {
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 mt-6 md:mt-16">
             {operatingPrincipleData.map((item, index) => {
-              const colSpan = index === 3 || index === 4 ? "col-span-6" : "col-span-4";
               return (
-                <div key={index} className={`sm:col-span-6 lg:${colSpan}`}>
+                <div
+                  key={index}
+                  className={`sm:col-span-6 ${
+                    index === 3 || index === 4
+                      ? "lg:col-span-6"
+                      : "lg:col-span-4"
+                  }`}
+                >
                   <Card item={item} />
                 </div>
               );
