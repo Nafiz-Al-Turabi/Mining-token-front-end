@@ -52,7 +52,7 @@ const WhatIsMining = () => {
         <img src="/images/homeImages/what is mining.svg" alt="" className="hidden md:block md:absolute -top-102 left-0" />
         <img src="/images/homeImages/what is mining2.svg" alt="" className="hidden md:block md:absolute -top-72 right-0" />
       <div className="max-w-[1320px] mx-auto px-4">
-        <h1 className="text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center mb-16">
+        <h1 className="text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center mb-6 md:mb-16">
           What is{" "}
           <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
             AI cloud
