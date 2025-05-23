@@ -2,11 +2,11 @@ import PlanCard from "@/components/ui/Cards/PlanCard";
 
 const Plan = () => {
   return (
-    <div className="bg-[#000503] py-15 relative">
+    <div className="bg-[#000503] pb-16  md:py-15 relative">
       <img src="/images/homeImages/plan-tech.svg" alt="" className="hidden md:block md:absolute -top-52 left-0" />
       <img src="/images/homeImages/plan-tech2.svg" alt="" className="hidden md:block md:absolute -top-102 right-0" />
       <div className="max-w-[1320px] mx-auto px-4 2xl:px-0">
-        <div className="mb-16">
+        <div className="mb-6 md:mb-16">
           <h1 className="sm:w-[20ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center leading-[130%]">
             Select your{" "}
             <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
