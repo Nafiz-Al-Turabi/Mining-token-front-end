@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/shared/Navbar";
 import BottomNav from "@/components/shared/BottomNav";
 import Footer from "@/components/shared/Footer";
+import { Suspense } from "react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,10 +29,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased fade-in`}
       >
         <Navbar />
-        {children}
+        <Suspense fallback={""}>
+            {children}
+          </Suspense>
         <Footer />
         <BottomNav />
       </body>

@@ -10,7 +10,7 @@ import FAQ from "@/components/features/Home/FAQ/FAQ";
 import AboutCompany from "@/components/features/Home/AboutCompany/AboutCompany";
 export default function MainPage() {
   return (
-    <div>
+    <div className=' fade-in'>
       <HeroSection />
       <WhatIsMining />
       <HowToStartMining />
