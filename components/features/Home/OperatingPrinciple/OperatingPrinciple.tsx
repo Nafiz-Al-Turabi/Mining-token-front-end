@@ -34,7 +34,7 @@ const OperatingPrinciple = () => {
   ];
 
   return (
-    <div className="bg-[#000503] py-10 lg:py-0 relative">
+    <div className="bg-[#000503] lg:py-0 relative">
       <img src="/images/bgSvgs/Operating1.svg" alt="" className="hidden md:block md:absolute -top-46 left-0 z-10" />
       <img src="/images/bgSvgs/Operating2.svg" alt="" className="hidden md:block md:absolute -top-230 right-0" />
       <div className="max-w-[1320px] mx-auto pb-25 px-4 2xl:px-0">
@@ -50,7 +50,7 @@ const OperatingPrinciple = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 mt-16">
+        <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 mt-6 md:mt-16">
           {operatingPrincipleData.map((item, index) => (
             <div
               key={index}
