@@ -26,7 +26,7 @@ const navItems = [
   },
   {
     label: "App",
-    href: "/app",
+    href: "/our-app",
   },
   {
     label: "Updates",
