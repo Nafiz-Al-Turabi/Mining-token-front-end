@@ -65,7 +65,7 @@ const FAQ = () => {
           </p>
         </div>
 
-        <section className="w-full md:w-1/2 mt-22 lg:mt-0">
+        <section className="w-full md:w-1/2 mt-22 md:mt-0">
           <div className="max-w-2xl mx-auto">
             <div className="space-y-4">
               {faqData.map((item, index) => (
