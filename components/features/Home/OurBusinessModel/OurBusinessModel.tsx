@@ -54,7 +54,7 @@ const OurBusinessModel = () => {
   };
 
   return (
-    <div className="bg-[#000503] py-10 lg:py-0 relative">
+    <div className="bg-[#000503] py-0 lg:py-0 relative">
       <img src="/images/bgSvgs/our business1.svg" alt="" className="hidden md:block md:absolute -top-46 left-0 z-10" />
       <img src="/images/bgSvgs/our business2.svg" alt="" className="hidden md:block md:absolute -top-96 right-0 z-10" />
       <div className="max-w-[1320px] mx-auto pb-25 ">
@@ -70,7 +70,7 @@ const OurBusinessModel = () => {
           </p>
         </div>
 
-        <div className="relative mt-16 ">
+        <div className="relative mt-6 md:mt-16 ">
           <Slider {...settings}>
             <div className="px-3">
               <BusinessCard />
