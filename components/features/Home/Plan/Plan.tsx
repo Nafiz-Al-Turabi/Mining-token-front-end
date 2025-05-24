@@ -15,8 +15,7 @@ const Plan = () => {
             to start earning
           </h1>
           <p className="sm:w-[60ch] mx-auto text-white text-center text-sm lg:text-lg font-normal tracking-[0.12px] mt-4">
-            Choose the mining plan that suits you and enjoy the benefits of
-            stable returns and cutting-edge technology
+          Choose the mining contract that suits you best—smart contracts executed transparently with no hidden fees.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 ">

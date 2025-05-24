@@ -7,28 +7,30 @@ import noice from "@/public/noice.jpg";
 const data = [
   {
     id: 1,
-    title: "Sign Up for Free & Choose Your Plan",
+    title: "Sign Up and Get Free Bitcoin",
     description:
-      "Create a free account on HEXminer and explore the range of investment plans available. Select the one...",
+      "Sign up to claim $100 free Bonus and start earning Bitcoin instantly.",
   },
   {
     id: 2,
-    title: "Sign Up for Free & Choose Your Plan",
+    title: "Choose Your Mining Plan",
     description:
-      "Create a free account on HEXminer and explore the range of investment plans available. Select the one...",
+      "Freely choose a free trial or upgrade to a paid plan to suit your investment needs.",
   },
   {
     id: 3,
-    title: "Sign Up for Free & Choose Your Plan",
+    title: "Start Earning Automatically",
     description:
-      "Create a free account on HEXminer and explore the range of investment plans available. Select the one...",
+      "Enjoy stable daily earnings delivered automatically, withdraw anytime, and effortlessly generate passive income.",
   },
 ];
 
 const HowToStartMining = () => {
   return (
     <div
-      style={{ backgroundImage: `radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.911) 50%), url(${backgroundImage.src})` }}
+      style={{
+        backgroundImage: `radial-gradient(circle at center, transparent 0%, rgba(0, 0, 0, 0.911) 50%), url(${backgroundImage.src})`,
+      }}
       className=" bg-cover bg-center bg-no-repeat relative pb-[64px] md:py-16 lg:py-25"
     >
       <div className="max-w-[1320px] mx-auto px-4 2xl:px-0">
@@ -41,38 +43,45 @@ const HowToStartMining = () => {
             in 3 Simple Steps
           </h1>
           <p className="text-white text-center text-sm lg:text-lg font-normal tracking-[0.12px] mt-4">
-            Learn how to quickly start your cloud mining investment and begin
-            eaming profits effortlessly
+            Start Cloud Mining in 3 Easy Steps and Earn Passive Crypto Income
           </p>
         </div>
-        <div className="flex flex-col sm:flex-row gap-4 md:gap-6 mt-6 md:mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 mt-6 md:mt-16">
           {data.map((item, index) => (
             <div
               key={item.id}
               style={{
                 backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
               }}
-              className={`bg-white/20 bg-cover bg-center bg-no-repeat backdrop-blur-3xl rounded-2xl p-4 relative overflow-hidden group opacity-90 ${index === 1 ? "md:border-b border-[#165a3e]" : ""}`}
+              className={`bg-white/20 bg-cover bg-center bg-no-repeat backdrop-blur-3xl rounded-2xl p-4 relative overflow-hidden group opacity-90 flex flex-col justify-between ${
+                index === 1 ? "md:border-b border-[#165a3e]" : ""
+              }`}
             >
-               {
-                index === 1 ?  <div className="hidden md:block h-[1px] w-[70%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-0 left-1/2 -translate-x-1/2 group-hover:w-[100%] transition-all duration-300"></div> :""
-               }
-              <div className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute ${index === 1 ? "-bottom-40 -right-40":"-top-40 -right-40"} blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}></div>
-              <div className="w-[69px] h-[69px] bg-white/10 backdrop-blur-3xl border border-[#424242] rounded-full flex items-center justify-center relative overflow-hidden">
-                <p className="h-14 w-14 bg-[#00E889] rounded-full absolute -bottom-10 blur-[20px] opacity-[0.1]"></p>
-                <p className="text-[1.68rem] font-bold text-stroke">
-                  0{index + 1}
-                </p>
+              {index === 1 ? (
+                <div className="hidden md:block h-[1px] w-[70%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-0 left-1/2 -translate-x-1/2 group-hover:w-[100%] transition-all duration-300"></div>
+              ) : (
+                ""
+              )}
+              <div
+                className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute ${
+                  index === 1 ? "-bottom-40 -right-40" : "-top-40 -right-40"
+                } blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
+              ></div>
+              <div>
+                <div className="w-[69px] h-[69px] bg-white/10 backdrop-blur-3xl border border-[#424242] rounded-full flex items-center justify-center relative overflow-hidden">
+                  <p className="h-14 w-14 bg-[#00E889] rounded-full absolute -bottom-10 blur-[20px] opacity-[0.1]"></p>
+                  <p className="text-[1.68rem] font-bold text-stroke">
+                    0{index + 1}
+                  </p>
+                </div>
+                <div className="my-6">
+                  <h3 className="w-[20ch] text-lg lg:text-2xl font-semibold mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-sm lg:text-base">{item.description}</p>
+                </div>
               </div>
-              <div className="my-6">
-                <h3 className="w-[20ch] text-lg lg:text-2xl font-semibold mb-3">
-                  {item.title}
-                </h3>
-                <p className="text-sm lg:text-base">
-                  {item.description}
-                </p>
-              </div>
-              <button className="flex items-center gap-2 border border-[#00E889] rounded-full px-6 py-2 cursor-pointer hover:bg-[#00E889]/20 backdrop-blur-2xl hover:text-white transition-all duration-300">
+              <button className="w-fit flex items-center gap-2 border border-[#00E889] rounded-full px-6 py-2 cursor-pointer hover:bg-[#00E889]/20 backdrop-blur-2xl hover:text-white transition-all duration-300">
                 More <BsArrowRight className="w-4 h-4 -rotate-45" />
               </button>
             </div>
