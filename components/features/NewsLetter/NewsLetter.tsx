@@ -11,6 +11,7 @@ export default function NewsLetter() {
         }}
         className="max-w-6xl mx-auto px-4 2xl:px-0 bg-cover bg-center relative overflow-hidden rounded-3xl"
       >
+        <div className="h-[2px] w-[70%] bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-[1px] left-1/2 -translate-x-1/2"></div>
         <div
           className={`h-[580px] w-[580px] bg-[#00E889] rounded-full absolute -top-70 -right-70 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
         ></div>
