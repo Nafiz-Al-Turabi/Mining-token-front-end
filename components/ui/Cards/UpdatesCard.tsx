@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const UpdatesCard = () => {
   return (
-    <div className="bg-[#0B0F12] rounded-xl p-4 max-w-sm w-full shadow-md text-white">
+    <div className="bg-[#0B0F12] rounded-xl p-4  w-full shadow-md text-white">
       {/* Image */}
       <div className="rounded-lg overflow-hidden">
         <Image
