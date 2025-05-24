@@ -18,7 +18,7 @@ export default function NewsLetter() {
         <div
           className={`h-[580px] w-[580px] bg-[#00E889] rounded-full absolute -bottom-70 -left-70 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
         ></div>
-        <section className=" text-white rounded-[20px] py-20 px-6 md:px-10">
+        <section className=" text-white rounded-[20px] py-20  md:px-10">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl lg:text-[4rem] font-semibold leading-tight mb-4">
               Join HEXminer Today
@@ -29,18 +29,18 @@ export default function NewsLetter() {
 
             <form
               onSubmit={(e) => e.preventDefault()}
-              className="flex flex-col sm:flex-row items-center justify-center gap-4 max-w-xl mx-auto"
+              className="mt-8 w-full max-w-md mx-auto"
             >
               <div className="relative">
                 <input
                   type="email"
                   required
                   placeholder="Enter Your Mail"
-                  className="flex-1 w-[350px] md:w-[400px] px-6 py-4 text-white placeholder-gray-400 bg-transparent border border-[#00e889] rounded-full focus:outline-none "
+                  className="w-full bg-transparent px-6 py-3 rounded-full border border-[#00e889] placeholder-gray-400 focus:outline-none"
                 />
                 <button
                   type="submit"
-                  className="absolute right-2 top-1/2 -translate-y-1/2 btn py-[8px] px-6 rounded-full cursor-pointer text-white text-lg hover:bg-gradient-to-r from-[#00E889] to-[#00824d]"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 btn text-white font-medium px-6 py-2 rounded-full transition-colors cursor-pointer"
                 >
                   Subscribe
                 </button>
