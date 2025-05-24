@@ -100,7 +100,7 @@ const FAQ = () => {
                     </span>
                   </button>
                   <div
-                    className={`overflow-hidden transition-all duration-500 relative z-10 ${
+                    className={`overflow-hidden transition-all transform duration-300 relative z-10 ${
                       openIndex === index
                         ? "max-h-96 opacity-100 py-4 px-6 text-gray-300"
                         : "max-h-0 opacity-0"
