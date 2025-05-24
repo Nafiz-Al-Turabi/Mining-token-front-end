@@ -52,7 +52,7 @@ const HowToStartMining = () => {
               style={{
                 backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
               }}
-              className={`bg-white/20 bg-cover bg-center bg-no-repeat backdrop-blur-3xl rounded-2xl p-4 relative overflow-hidden group ${index === 1 ? "md:border-b border-[#165a3e]" : ""}`}
+              className={`bg-white/20 bg-cover bg-center bg-no-repeat backdrop-blur-3xl rounded-2xl p-4 relative overflow-hidden group opacity-90 ${index === 1 ? "md:border-b border-[#165a3e]" : ""}`}
             >
                {
                 index === 1 ?  <div className="hidden md:block h-[1px] w-[70%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-0 left-1/2 -translate-x-1/2 group-hover:w-[100%] transition-all duration-300"></div> :""
