@@ -3,7 +3,7 @@ import React from 'react'
 
 export default function PlansDetailsPage() {
   return (
-    <div>
+    <div className='fade-in'>
         <PlansDetails />
     </div>
   )
