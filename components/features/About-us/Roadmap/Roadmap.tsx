@@ -41,7 +41,7 @@ export default function Roadmap() {
     target: containerRef,
     offset: ["start start", "end end"],
   });
-  const height = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
+  const height = useTransform(scrollYProgress, [0, 1], ["10%", "100%"]);
 
   return (
     <section ref={containerRef} className="pb-20 bg-[$#000503] relative">
