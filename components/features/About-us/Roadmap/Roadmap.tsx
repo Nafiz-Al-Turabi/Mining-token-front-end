@@ -41,10 +41,10 @@ export default function Roadmap() {
     target: containerRef,
     offset: ["start start", "end end"],
   });
-  const height = useTransform(scrollYProgress, [0, 1], ["2%", "100%"]);
+  const height = useTransform(scrollYProgress, [0, 1], ["0%", "150%"]);
 
   return (
-    <section ref={containerRef} className="py-20 bg-[$#000503] relative">
+    <section ref={containerRef} className="pb-20 bg-[$#000503] relative">
       <h2 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] mb-20 text-center font-semibold">
         Company <span className="bg-gradient-to-l from-[#00E889] to-[#078854] bg-clip-text text-transparent">Roadmap</span>
       </h2>
@@ -57,7 +57,7 @@ export default function Roadmap() {
           />
         </div>
 
-        <div className="flex flex-col gap-24">
+        <div className="flex flex-col gap-16 lg:gap-24">
           {roadmapData.map((item, index) => (
             <TimelineItem key={index} item={item} index={index} />
           ))}
@@ -73,7 +73,20 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
 
   useEffect(() => {
     if (inView) {
-      controls.start({ opacity: 1, y: 0 });
+      controls.start({
+        opacity: 1,
+        y: 0,
+        translateY: [0.95, 1.05, 1],
+        transition: {
+          duration: 0.8,
+          ease: "easeOut",
+        },
+      });
+    } else {
+      controls.start({
+        opacity: 0,
+        y: 40,
+      });
     }
   }, [controls, inView]);
 
@@ -94,11 +107,11 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
         style={{
           backgroundImage: ` radial-gradient(50% 50% at 50% 50%, #FFF 0%, #00824D 100%, #00E889 100%)`,
         }}
-        className="absolute -left-1 lg:left-1/2 transform lg:-translate-x-1/2  rounded-full w-8 h-8 z-20"
+        className="absolute -left-1 top-2 lg:top-[45%] lg:left-1/2 transform lg:-translate-x-1/2  rounded-full w-8 h-8 z-20"
       />
 
       <div
-        className={` absolute -left-1 ${
+        className={` absolute left-14 -top-1 lg:top-[45%] ${
           isRight ? "lg:left-[60%]" : " lg:left-[40%]"
         } w-fit transform lg:-translate-x-1/2 rounded-full `}
       >
@@ -108,7 +121,7 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
         <div className="text-gray-400 ">{item.subtitle}</div>
       </div>
 
-      <div className="w-full max-w-[424px] p-4 rounded-xl shadow-lg bg-[#0c0c0c] text-white flex flex-col gap-3 ml-12 lg:ml-0 relative overflow-hidden border-b border-[#00E889]/50 group">
+      <div className="w-full max-w-[424px] p-4 rounded-xl shadow-lg bg-[#0c0c0c] text-white flex flex-col gap-3 ml-12 lg:ml-0 relative overflow-hidden border-b border-[#00E889]/50 group mt-24 lg:mt-0">
         <div
           className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -top-40 -right-40 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
         ></div>
