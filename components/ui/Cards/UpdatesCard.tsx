@@ -25,10 +25,10 @@ const UpdatesCard = () => {
       <div className="mt-4 flex flex-col gap-2 relative z-10">
         <div>
           <div className="flex  justify-between">
-            <h2 className="text-lg sm:text-2xl font-semibold w-[20ch] mb-3">
+            <h2 className="text-lg xl:text-2xl font-semibold w-[20ch] mb-3">
               AI-Powered <span className="text-[#00E889]">Task Management</span>
             </h2>
-            <span className="text-base text-gray-400 w-32">15 Aug 2024</span>
+            <span className="text-sm xl:text-base text-gray-400 w-32">15 Aug 2024</span>
           </div>
           <p className="text-sm sm:text-base text-gray-300">
             We’re excited to introduce AI-powered task management, which
