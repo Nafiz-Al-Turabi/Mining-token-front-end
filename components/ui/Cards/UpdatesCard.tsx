@@ -5,37 +5,38 @@ import Link from "next/link";
 
 const UpdatesCard = () => {
   return (
-    <div className="bg-[#0B0F12] rounded-xl p-4  w-full shadow-md text-white">
-      {/* Image */}
-      <div className="rounded-lg overflow-hidden">
+    <div className="bg-[#0b0b0b] rounded-xl p-4  w-full shadow-md text-white bg-cover bg-center relative overflow-hidden">
+      <div
+        className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -top-[207px] -right-[207px] blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
+      ></div>
+      <div
+        className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -bottom-[207px] -left-[207px] blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
+      ></div>
+      <div className="rounded-lg overflow-hidden relative z-10">
         <Image
           src="/images/updatesImages/card-image.jpg"
           alt="AI Task Management"
           width={512}
-          height={300}
+          height={250}
           className="object-cover w-full h-auto"
         />
       </div>
-
-      {/* Content */}
-      <div className="mt-4 flex flex-col gap-2">
-        {/* Title + Date */}
-        <div className="flex items-center justify-between">
-          <h2 className="text-lg sm:text-xl font-semibold">
-            AI-Powered <span className="text-green-400">Task Management</span>
-          </h2>
-          <span className="text-sm text-gray-400">15 Aug 2024</span>
+      <div className="mt-4 flex flex-col gap-2 relative z-10">
+        <div>
+          <div className="flex  justify-between">
+            <h2 className="text-lg sm:text-2xl font-semibold w-[20ch] mb-3">
+              AI-Powered <span className="text-[#00E889]">Task Management</span>
+            </h2>
+            <span className="text-base text-gray-400 w-32">15 Aug 2024</span>
+          </div>
+          <p className="text-sm sm:text-base text-gray-300">
+            We’re excited to introduce AI-powered task management, which
+            makes...
+          </p>
         </div>
-
-        {/* Description */}
-        <p className="text-sm sm:text-base text-gray-300">
-          We’re excited to introduce AI-powered task management, which makes...
-        </p>
-
-        {/* Read More Button */}
         <Link
           href="/updates/ai-task-management"
-          className="inline-block mt-2 w-max px-4 py-2 text-sm border border-green-500 rounded-full text-green-400 hover:bg-green-500 hover:text-black transition"
+          className="inline-block mt-2 w-max px-4 py-2 text-sm border border-[#00E889] rounded-full text-[#00E889] hover:bg-[#00E889] hover:text-black transition"
         >
           Read More
         </Link>

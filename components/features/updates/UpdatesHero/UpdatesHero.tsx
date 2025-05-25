@@ -30,7 +30,7 @@ const UpdatesHero = () => {
             />
             <button
               type="submit"
-              className="absolute right-2 top-1/2 -translate-y-1/2 btn text-white font-medium px-6 py-2 rounded-full transition-colors cursor-pointer"
+              className="absolute right-1.5 top-1/2 -translate-y-1/2 btn text-white font-medium px-6 py-2 rounded-full transition-colors cursor-pointer"
             >
               Subscribe
             </button>
