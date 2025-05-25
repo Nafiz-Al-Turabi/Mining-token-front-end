@@ -5,13 +5,14 @@ import Link from "next/link";
 
 const UpdatesCard = () => {
   return (
-    <div className="bg-[#0b0b0b] rounded-xl p-4  w-full shadow-md text-white bg-cover bg-center relative overflow-hidden">
+    <div className="bg-[#0b0b0b] rounded-xl p-4  w-full shadow-md text-white bg-cover bg-center relative overflow-hidden border-b border-[#00e88744]">
       <div
         className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -top-[207px] -right-[207px] blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
       ></div>
       <div
         className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -bottom-[207px] -left-[207px] blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
       ></div>
+      <div className="h-[2px] w-[70%] bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-[1px] left-1/2 -translate-x-1/2"></div>
       <div className="rounded-lg overflow-hidden relative z-10">
         <Image
           src="/images/updatesImages/card-image.jpg"

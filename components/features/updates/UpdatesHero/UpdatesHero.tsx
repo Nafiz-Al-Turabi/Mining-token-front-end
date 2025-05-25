@@ -8,7 +8,7 @@ const UpdatesHero = () => {
       style={{
         backgroundImage: `radial-gradient(113.74% 43.72% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%), url(${bgImage.src})`,
       }}
-      className="bg-cover bg-center bg-no-repeat text-white"
+      className="bg-cover bg-center bg-no-repeat min-h-[70vh] md:min-h-[70%] text-white"
     >
       <div className="max-w-[1320px] mx-auto px-4 py-44 flex flex-col items-center md:items-start">
         <h1 className="text-3xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-center md:text-left leading-tight max-w-[18ch]">
