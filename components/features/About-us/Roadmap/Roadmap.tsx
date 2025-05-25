@@ -121,7 +121,7 @@ function TimelineItem({ item, index }: { item: any; index: number }) {
         <div className="text-gray-400 ">{item.subtitle}</div>
       </div>
 
-      <div className="w-full max-w-[424px] p-4 rounded-xl shadow-lg bg-[#0c0c0c] text-white flex flex-col gap-3 ml-12 lg:ml-0 relative overflow-hidden border-b border-[#00E889]/50 group mt-24 lg:mt-0">
+      <div className="w-full max-w-[524px] p-4 rounded-xl shadow-lg bg-[#0c0c0c] text-white flex flex-col gap-3 ml-12 lg:ml-0 relative overflow-hidden border-b border-[#00E889]/50 group mt-24 lg:mt-0">
         <div
           className={`h-[414px] w-[414px] bg-[#00E889] rounded-full absolute -top-40 -right-40 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300`}
         ></div>
