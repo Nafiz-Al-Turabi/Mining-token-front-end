@@ -48,6 +48,21 @@ body {
   animation: fadeIn 0.5s ease-in;
 }
 
+@layer utilities {
+  @keyframes fillLine {
+    0% {
+      height: 0%;
+    }
+    100% {
+      height: 100%;
+    }
+  }
+
+  .animate-fill-up {
+    animation: fillLine 3s ease-in-out forwards;
+  }
+}
+
 
 .btn {
   background: linear-gradient(
