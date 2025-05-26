@@ -3,15 +3,24 @@ import Image from "next/image";
 
 const CompanyRegistration = () => {
   return (
-    <div className="bg-[#000503] py-25 px-4">
-      <div
-        
-        className="bg-[#0b0b0b] max-w-[1320px] mx-auto bg-cover bg-center bg-no-repeat flex flex-col lg:flex-row  items-center rounded-3xl overflow-hidden relative border-b border-[#00E889]/20 "
-      >
+    <div className="bg-[#000503] py-25 px-4 relative z-10">
+      {/* Illustration */}
+      <img
+        src="/images/aboutUs/Group (8).svg"
+        alt="Company Registration"
+        className="hidden lg:block absolute top-0 left-0 "
+      />
+      <img
+        src="/images/aboutUs/Group (9).svg"
+        alt="Company Registration"
+        className="hidden lg:block absolute -top-20 right-0 "
+      />
+      <div className="bg-[#0b0b0b] max-w-[1320px] mx-auto bg-cover bg-center bg-no-repeat flex flex-col lg:flex-row  items-center rounded-3xl overflow-hidden relative border-b border-[#00E889]/20 ">
         <div
           className={`h-[686px] w-[686px] bg-[#0d1f18] rounded-full absolute -bottom-80 lg:top-1/2 lg:-translate-y-1/2 lg:right-40 blur-[50px]  `}
         ></div>
         <div className="h-[2px] w-[70%] bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-[1px] left-1/2 -translate-x-1/2"></div>
+
         <Image
           src="/images/aboutUs/register.png"
           alt="Company Registration"
