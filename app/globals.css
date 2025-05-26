@@ -20,8 +20,8 @@
 } */
 
 @font-face {
-  font-family: 'Inter';
-  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-family: "Inter";
+  src: url("/fonts/Inter-VariableFont_opsz,wght.ttf") format("truetype");
   font-weight: 100 900;
   font-style: normal;
 }
@@ -29,7 +29,7 @@
 body {
   background: #000000;
   color: #ffffff;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Custom css */
@@ -62,7 +62,6 @@ body {
     animation: fillLine 3s ease-in-out forwards;
   }
 }
-
 
 .btn {
   background: linear-gradient(
@@ -97,6 +96,11 @@ body {
   color: #ffffff;
 }
 
+.guide-box-shadow {
+  box-shadow: -4px -4px 3px 0px rgba(0, 55, 33, 0.25) inset,
+    4px 4px 3px 0px rgba(0, 55, 33, 0.25) inset;
+}
+
 /* Hero Section */
 
 .bgrad {
@@ -104,5 +108,9 @@ body {
 }
 /* Navbar */
 .test1 {
-  background: linear-gradient(circle at center, rgba(0, 229, 137, 0.3), rgb(0, 5, 3))
+  background: linear-gradient(
+    circle at center,
+    rgba(0, 229, 137, 0.3),
+    rgb(0, 5, 3)
+  );
 }

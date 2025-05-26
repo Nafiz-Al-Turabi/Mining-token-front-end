@@ -94,14 +94,14 @@ const Navbar = () => {
         <div className="h-[1px] w-[50%] rounded-full bg-gradient-to-l from-[#00E88900] via-[#00E889] to-[#00E88900] absolute -bottom-[1px] left-1/2 -translate-x-1/2"></div>
 
         <Link href="/">
-          <img src="/logo.svg" alt="logo" className="h-8 lg:h-auto" />
+          <img src="/logo.svg" alt="logo" className="h-6 lg:h-8 xl:h-auto" />
         </Link>
         <div className="hidden lg:flex gap-6">
           {navItems.map((item, index) => (
             <Link
               key={index}
               href={item.href}
-              className="xl:text-lg text-[#E9E9EA]"
+              className="lg:text-sm xl:text-lg text-[#E9E9EA]"
             >
               {item.label}
             </Link>
