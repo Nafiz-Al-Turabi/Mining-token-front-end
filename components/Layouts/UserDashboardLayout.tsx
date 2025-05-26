@@ -91,7 +91,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             ))}
           </nav>
         </div>
-        <div className="mb-6 px-4">
+        <div className="mb-6  px-4">
           <button className="flex items-center gap-2 text-base lg:text-lg text-white hover:bg-[#00e88711] w-full py-2 px-4 rounded-full duration-300 cursor-pointer">
             <LogoutIcon />
             Logout
