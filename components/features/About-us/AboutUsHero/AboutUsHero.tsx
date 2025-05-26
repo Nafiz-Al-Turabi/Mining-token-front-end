@@ -1,16 +1,9 @@
 import React from "react";
 import bgImage from "@/public/images/aboutUs/hero.jpg";
-import { BiSolidBadgeDollar } from "react-icons/bi";
-import {
-  FaHandHoldingDollar,
-  FaSackDollar,
-  FaUserGroup,
-} from "react-icons/fa6";
-
 const AboutUsHero = () => {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat text-white"
+      className="bg-cover bg-center bg-no-repeat text-white lg:h-screen"
       style={{
         backgroundImage: `radial-gradient(84.26% 32.38% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%), linear-gradient(162deg, rgba(0, 0, 0, 0.38) 8.83%, rgba(0, 0, 0, 0.00) 52.13%),url(${bgImage.src})`,
       }}
@@ -18,7 +11,7 @@ const AboutUsHero = () => {
       <div className="max-w-[1320px] mx-auto px-4 lg:pt-60 pt-40 lg:pb-[156px] pb-[35px] flex flex-col items-center md:items-start">
         <h1 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-bold text-center mb-4 leading-[120%] md:w-[20ch] mx-auto">
           About Our{" "}
-          <span className="bg-gradient-to-l from-[#00E889] to-[#078854] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-l to-[#00E889] from-[#078854] bg-clip-text text-transparent">
             Company
           </span>
         </h1>

@@ -44,7 +44,7 @@ export default function Roadmap() {
   const height = useTransform(scrollYProgress, [0, 1], ["10%", "100%"]);
 
   return (
-    <section ref={containerRef} className="pb-20 bg-[$#000503] relative">
+    <section ref={containerRef} className="pb-20 bg-[#000503] relative">
       <h2 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] mb-20 text-center font-semibold">
         Company <span className="bg-gradient-to-l from-[#00E889] to-[#078854] bg-clip-text text-transparent">Roadmap</span>
       </h2>
