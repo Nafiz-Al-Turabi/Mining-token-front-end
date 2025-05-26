@@ -6,6 +6,7 @@ import { FaGlobe } from "react-icons/fa";
 import { IoClose } from "react-icons/io5";
 import { RiMenu3Line } from "react-icons/ri";
 import noice from "@/public/noice.jpg";
+import { usePathname } from "next/navigation";
 
 const navItems = [
   {
@@ -45,6 +46,7 @@ const navItems = [
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
 
   // Handle resize events to determine if mobile view should be shown
   useEffect(() => {
@@ -101,7 +103,9 @@ const Navbar = () => {
             <Link
               key={index}
               href={item.href}
-              className="lg:text-sm xl:text-lg text-[#E9E9EA]"
+              className={`lg:text-sm xl:text-lg transition-colors ${
+                pathname === item.href ? "text-white" : "text-[#cdcdcf]"
+              }`}
             >
               {item.label}
             </Link>
@@ -113,12 +117,17 @@ const Navbar = () => {
           <button className="flex items-center gap-2 text-lg text-[#E9E9EA] cursor-pointer">
             <FaGlobe size={24} className="text-[#00e889]" /> English
           </button>
-          <Link href="/login" className="btn btn-primary">Login</Link>
+          <Link href="/login" className="btn btn-primary">
+            Login
+          </Link>
         </div>
 
         {/* Mobile Controls */}
         <div className="flex items-center gap-1 lg:hidden">
-          <Link href="/login" className="btn py-1 px-2 sm:px-8 border border-[#00E889]/20 rounded-full cursor-pointer text-white text-lg">
+          <Link
+            href="/login"
+            className="btn py-1 px-2 sm:px-8 border border-[#00E889]/20 rounded-full cursor-pointer text-white text-lg"
+          >
             Login
           </Link>
           <button className="flex items-center gap-2 text-lg text-[#E9E9EA] cursor-pointer">
@@ -169,8 +178,9 @@ const Navbar = () => {
               <Link
                 key={index}
                 href={item.href}
-                className="text-base text-white hover:text-[#00e889] transition-colors"
-                onClick={() => setIsMenuOpen(false)}
+                className={`lg:text-sm xl:text-lg transition-colors ${
+                  pathname === item.href ? "text-white" : "text-[#cdcdcf]"
+                }`}
               >
                 {item.label}
               </Link>
