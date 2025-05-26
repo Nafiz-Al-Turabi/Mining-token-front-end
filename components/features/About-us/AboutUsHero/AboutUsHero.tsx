@@ -8,14 +8,15 @@ const AboutUsHero = () => {
         backgroundImage: `radial-gradient(84.26% 32.38% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%), linear-gradient(162deg, rgba(0, 0, 0, 0.38) 8.83%, rgba(0, 0, 0, 0.00) 52.13%),url(${bgImage.src})`,
       }}
     >
+      <div className="inset-0 absolute bg-gradient-to-b from-[#000503] to-transparent"/>
       <div className="max-w-[1320px] mx-auto px-4 lg:pt-60 pt-40 lg:pb-[156px] pb-[35px] flex flex-col items-center md:items-start">
-        <h1 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-bold text-center mb-4 leading-[120%] md:w-[20ch] mx-auto">
+        <h1 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] font-bold text-center mb-4 leading-[120%] md:w-[20ch] mx-auto relative z-10">
           About Our{" "}
           <span className="bg-gradient-to-l to-[#00E889] from-[#078854] bg-clip-text text-transparent">
             Company
           </span>
         </h1>
-        <p className="text-center text-lg lg:text-2xl font-medium tracking-[0.12px] md:w-[52ch] mx-auto">
+        <p className="text-center text-lg lg:text-2xl font-medium tracking-[0.12px] md:w-[52ch] mx-auto relative z-10">
           HEXminer: Driven by Innovation, Effortless Cloud Mining
         </p>
 
