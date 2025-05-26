@@ -4,30 +4,37 @@ import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { HiOutlineMenuAlt1 } from "react-icons/hi";
-
+import { HiOutlineMenu } from "react-icons/hi";
+import { RxDashboard } from "react-icons/rx";
+import PageHeader from "../features/UserDashboard/PageHeader/PageHeader";
+import RocketIcon from "../icons/RocketIcon";
+import WalletIcon from "../icons/WalletIcon";
+import CartIcon from "../icons/CartIcon";
+import CoinIcon from "../icons/CoinIcon";
+import ReferrIcon from "../icons/ReferrIcon";
+import SettingsIcon from "../icons/SettingsIcon";
+import DashboardIcon from "../icons/DashboardIcon";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
+  const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
+
+  const menuItems = [
+    { href: "/dashboard", icon: <DashboardIcon />, label: "Dashboard" },
+    { href: "/dashboard/start-mining", icon: <RocketIcon />, label: "Start Mining " },
+    { href: "/dashboard/wallets", icon: <WalletIcon />, label: "Wallets" },
+    { href: "/dashboard/orders", icon: <CartIcon />, label: "Orders" },
+    { href: "/dashboard/profit", icon: <CoinIcon />, label: "Profit" },
+    { href: "/dashboard/referral-rewards", icon: <ReferrIcon />, label: "Referral Rewards" },
+    { href: "/dashboard/settings", icon: <SettingsIcon />, label: "Settings" },
+  ];
 
   const getPageTitle = () => {
-    const pathMap: Record<string, string> = {
-      "/": "Home",
-      "/dashboard": "Dashboard",
-      "/settings": "Settings",
-      "/profile": "Profile",
-      "/users": "Users",
-    };
-
-    const matchedPath = Object.keys(pathMap)
-      .sort((a, b) => b.length - a.length)
-      .find((path) => pathname.startsWith(path));
-
-    return matchedPath ? pathMap[matchedPath] : "Page";
+    const matchedItem = menuItems
+      .sort((a, b) => b.href.length - a.href.length)
+      .find((item) => pathname.startsWith(item.href));
+    return matchedItem ? matchedItem.label : "Page";
   };
 
   return (
@@ -40,65 +47,61 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       )}
 
       {/* Sidebar */}
-      <div
+      <aside
         className={`fixed z-30 h-screen w-64 transform bg-[#0e0e0e] transition-transform duration-300 ease-in-out ${
           sidebarOpen ? "translate-x-0" : "-translate-x-full"
         } lg:translate-x-0`}
       >
-        <div className="flex items-center py-8 pl-12">
+        <div className="flex items-center py-5 px-6">
           <Link href="/">
-            <Image src="/logo.svg" alt="logo" width={100} height={100} className="w-full" />
+            <Image
+              src="/logo.svg"
+              alt="logo"
+              width={100}
+              height={100}
+              className="w-full"
+            />
           </Link>
         </div>
 
         <nav className="mt-4 px-4 space-y-2">
-          {/* Example menu item */}
-          <Link
-            href="/"
-            className={`flex items-center text-base font-medium px-4 py-3 rounded-md gap-2 ${
-              pathname === "/" ? "btn text-primary font-semibold" : "text-main hover:bg-green-500"
-            }`}
-          >
-            Home
-          </Link>
-          <Link
-            href="/dashboard"
-            className={`flex items-center text-base font-medium px-4 py-3 rounded-md gap-2 ${
-              pathname.startsWith("/dashboard") ? "btn text-primary font-semibold" : "text-main hover:bg-green-500"
-            }`}
-          >
-            Dashboard
-          </Link>
-          <Link
-            href="/settings"
-            className={`flex items-center text-base font-medium px-4 py-3 rounded-md gap-2 ${
-              pathname.startsWith("/settings") ? "btn text-primary font-semibold" : "text-main hover:bg-green-500"
-            }`}
-          >
-            Settings
-          </Link>
+          {menuItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={`flex items-center text-sm font-medium px-4 py-3 rounded-full gap-2 ${
+                pathname.startsWith(item.href)
+                  ? "btn font-semibold text-white"
+                  : " hover:bg-[#00e889]"
+              }`}
+            >
+              {item.icon}
+              {item.label}
+            </Link>
+          ))}
         </nav>
-      </div>
+      </aside>
 
-      {/* Main Content */}
-      <div className="flex-1 overflow-auto lg:ml-64">
-        <div className="p-4 lg:hidden">
-          <button
-            onClick={toggleSidebar}
-            className="text-main focus:outline-none"
-          >
-            <HiOutlineMenuAlt1 size={26} />
+      {/* Main content */}
+      <main className="flex-1 overflow-auto lg:ml-64">
+        
+
+        {/* Page Header */}
+        <div className="flex justify-between items-center bg-[#0e0e0e] p-6">
+        <div className="lg:hidden">
+          <button onClick={toggleSidebar} className="focus:outline-none">
+            <HiOutlineMenu size={26} />
           </button>
         </div>
-
-        {/* Page Title */}
-        <div className="bg-[#0e0e0e] text-main p-4">
-          <h1 className="text-2xl font-semibold">{getPageTitle()}</h1>
+          <h1 className="hidden lg:block text-xl font-semibold bg-gradient-to-l from-[#067549] to-[#00e889] text-transparent bg-clip-text w-fit">{getPageTitle()}</h1>
+          <div>
+            <PageHeader />
+          </div>
         </div>
 
-        {/* Children content */}
+        {/* Children */}
         <div className="p-4">{children}</div>
-      </div>
+      </main>
     </div>
   );
 }
