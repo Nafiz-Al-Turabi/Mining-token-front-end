@@ -10,7 +10,7 @@ import {
 const AboutUsHero = () => {
   return (
     <div
-      className="bg-cover bg-center bg-no-repeat min-h-[70vh] md:min-h-[70%] text-white"
+      className="bg-cover bg-center bg-no-repeat text-white"
       style={{
         backgroundImage: `radial-gradient(84.26% 32.38% at 50% 50%, rgba(0, 0, 0, 0.00) 0%, #000 100%), linear-gradient(162deg, rgba(0, 0, 0, 0.38) 8.83%, rgba(0, 0, 0, 0.00) 52.13%),url(${bgImage.src})`,
       }}
