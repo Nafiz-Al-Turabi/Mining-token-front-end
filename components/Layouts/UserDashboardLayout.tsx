@@ -18,7 +18,6 @@ import LogoutIcon from "../icons/LogoutIcon";
 export default function AppLayout({ children }: { children: React.ReactNode }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
-
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
   const menuItems = [
@@ -45,6 +44,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       .find((item) => pathname.startsWith(item.href));
     return matchedItem ? matchedItem.label : "Page";
   };
+  
 
   return (
     <div className="flex bg-[#000503] min-h-screen">
@@ -108,7 +108,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       {/* Main content */}
       <main className="flex-1 overflow-auto lg:ml-64">
         {/* Page Header */}
-        <div className="flex justify-between items-center bg-[#0e0e0e] p-6">
+        <div className="flex justify-between items-center bg-[#0e0e0e] p-6 fixed lg:static top-0 left-0 right-0 z-50 ">
           <div className="lg:hidden">
             <button onClick={toggleSidebar} className="focus:outline-none">
               <HiOutlineMenu size={26} />
@@ -123,7 +123,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Children */}
-        <div className="p-4">{children}</div>
+        <div className="p-4 mt-20 lg:mt-0">{children}</div>
       </main>
     </div>
   );
