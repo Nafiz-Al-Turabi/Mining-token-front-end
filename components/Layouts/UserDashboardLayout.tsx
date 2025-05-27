@@ -75,20 +75,26 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
           </div>
 
           <nav className="mt-4 px-4 space-y-2">
-            {menuItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`flex items-center text-sm font-medium px-4 py-3 rounded-full gap-2 ${
-                  pathname.startsWith(item.href)
+            {menuItems.map((item) => {
+              const isActive =
+                item.href === "/dashboard"
+                  ? pathname === "/dashboard"
+                  : pathname.startsWith(item.href);
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`flex items-center text-sm font-medium px-4 py-3 rounded-full gap-2 transition-all duration-300 ${
+                  isActive
                     ? "btn font-semibold text-white"
                     : " hover:bg-[#00e889]"
                 }`}
               >
                 {item.icon}
-                {item.label}
-              </Link>
-            ))}
+                  {item.label}
+                </Link>
+              );
+            })}
           </nav>
         </div>
         <div className="mb-6  px-4">
