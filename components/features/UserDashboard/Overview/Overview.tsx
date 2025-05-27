@@ -68,7 +68,7 @@ const Overview = () => {
     },
   ];
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
       {OverviewData.map((Overview, index) => (
         <div
           style={{
@@ -78,15 +78,16 @@ const Overview = () => {
         >
           <div className="h-[200px] w-[200px] bg-[#00E889] rounded-full absolute -bottom-[127px] right-1/2 translate-x-1/2 blur-[150px] opacity-[0.1] group-hover:opacity-[0.2] transition-all duration-300" />
           <div className="flex items-center justify-between">
-            <Image src={Overview.icon} alt="frame" height={40} width={40} />
+            <Image src={Overview.icon} alt="frame" height={40} width={40} className="w-6 h-6 sm:h-10 sm:w-10" />
             <Image
               src={Overview.chart}
               alt="static-chart"
-              height={24}
               width={60}
+              height={24}
+              className="w-[50px] h-[20px]  sm:h-auto sm:w-auto"
             />
           </div>
-          <h2 className="text-lg md:text-[1.75rem] flex items-center gap-2 font-bold mt-3 mb-1">
+          <h2 className="text-base md:text-[1.75rem] flex items-center gap-2 font-bold mt-3 mb-1">
             <span className="text-sm font-normal">$</span>
             {Overview.amount}
           </h2>
@@ -98,9 +99,9 @@ const Overview = () => {
               }`}
             >
               {Overview.growth ? (
-                <IoTrendingUp size={20} />
+                <IoTrendingUp className= "text-base sm:text-xl" />
               ) : (
-                <IoTrendingDown className="text-red-600" size={20} />
+                <IoTrendingDown className="text-red-600  text-base sm:text-xl"  />
               )}
               {Overview.percentage}%
             </p>
@@ -116,10 +117,10 @@ const Overview = () => {
         <div className="h-[120px] w-[120px] absolute top-0 left-0 bg-[#00E889] opacity-[0.3] blur-[100px] group-hover:opacity-[0.2] transition-all duration-300" />
         <div className="h-[120px] w-[120px] absolute bottom-0 right-0 bg-[#00E889] opacity-[0.3] blur-[100px] group-hover:opacity-[0.2] transition-all duration-300" />
         <div className="flex justify-center relative z-10">
-          <img src="/images/dashboardImages/frame7.svg" alt="" />
+          <Image src="/images/dashboardImages/frame7.svg" alt="" height={32} width={32} />
         </div>
         <div className="flex justify-center mt-3 relative z-10">
-          <p className="text-xl font-normal bg-gradient-to-r from-[#00E889] to-[#004e2f] text-transparent bg-clip-text w-fit">
+          <p className="text-base sm:text-xl font-normal bg-gradient-to-r from-[#00E889] to-[#004e2f] text-transparent bg-clip-text w-fit">
             Add Data
           </p>
         </div>
