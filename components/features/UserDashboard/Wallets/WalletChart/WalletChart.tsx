@@ -14,7 +14,9 @@ const WalletChart = () => {
       <div
         className={`h-[344px] w-[344px] bg-[#00E889] rounded-full absolute bottom-0 right-0 blur-[150px] opacity-[0.05]`}
       />
-      This is the wallet chart
+      <div className="relative z-10">
+        Will Add Chart Here
+     </div>
     </div>
   );
 };
