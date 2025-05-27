@@ -91,6 +91,7 @@ const OrdersList = () => {
   };
   return (
     <div>
+        <h1 className="text-2xl font-bold pb-4">Orders</h1>
       <ConfigurableTable
         columns={columns}
         data={formattedData}
