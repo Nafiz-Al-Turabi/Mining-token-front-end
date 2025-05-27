@@ -123,7 +123,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         </div>
 
         {/* Children */}
-        <div className="p-4 mt-20 lg:mt-0">{children}</div>
+        <div className="p-4 mt-20 lg:mt-0 fade-in">{children}</div>
       </main>
     </div>
   );

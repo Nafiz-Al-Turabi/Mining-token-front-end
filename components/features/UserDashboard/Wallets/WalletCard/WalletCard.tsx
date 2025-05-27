@@ -1,6 +1,7 @@
 import React from "react";
 import { FaPlus } from "react-icons/fa";
 import noice from "@/public/noice.jpg";
+import Link from "next/link";
 
 const WalletCard = () => {
   return (
@@ -17,9 +18,9 @@ const WalletCard = () => {
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <h2 className="text-2xl font-normal">Wallets</h2>
-          <button className="flex items-center gap-1 px-3 py-1 bg-[#0B1B15] hover:bg-[#00e889]/20 rounded-full text-sm cursor-pointer duration-300 ease-in-out">
+          <Link href="/dashboard/setting-wallet" className="flex items-center gap-1 px-3 py-1 bg-[#0B1B15] hover:bg-[#00e889]/20 rounded-full text-sm cursor-pointer duration-300 ease-in-out">
             Add Wallet <FaPlus className="ml-1 text-xs" />
-          </button>
+          </Link>
         </div>
 
         {/* Balance Card */}
