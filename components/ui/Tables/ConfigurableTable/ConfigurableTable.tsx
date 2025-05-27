@@ -55,7 +55,7 @@ const ConfigurableTable: React.FC<TableProps> = ({
               ))}
               {actions && (
                 <TableHead className="w-20 text-base text-[#d2d2d5] text-center font-medium border-b border-[#363636]">
-                  More
+                  Actions
                 </TableHead>
               )}
             </TableRow>

@@ -14,7 +14,7 @@ const OverviewTable = () => {
         className = "bg-[#FF00041A] text-[#FF0004]";
         break;
       case "paid":
-        text = "Paid";
+        text = "Passed";
         className = "bg-[#00E8891A] text-[#22C55E]";
         break;
       default:
