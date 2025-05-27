@@ -65,6 +65,7 @@ const OverviewTable = () => {
 
   return (
     <div className="mt-6">
+      <h1 className="text-2xl font-bold pb-4">The Ongoing Plan</h1>
       <ConfigurableTable columns={columns} data={formattedData} loading={false} />
     </div>
   );

@@ -108,7 +108,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       {/* Main content */}
       <main className="flex-1 overflow-auto lg:ml-64">
         {/* Page Header */}
-        <div className="flex justify-between items-center bg-[#0e0e0e] p-6 fixed lg:static top-0 left-0 right-0 z-50 ">
+        <div className="flex justify-between items-center bg-[#0e0e0e] lg:ml-1 p-6 fixed lg:static top-0 left-0 right-0 z-50 ">
           <div className="lg:hidden">
             <button onClick={toggleSidebar} className="focus:outline-none">
               <HiOutlineMenu size={26} />
