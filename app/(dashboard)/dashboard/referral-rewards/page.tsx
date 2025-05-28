@@ -1,12 +1,12 @@
+import ReferralRewardsLists from '@/components/features/UserDashboard/ReferralRewards/ReferralRewardsLists/ReferralRewardsLists'
+import { ReferralsChart } from '@/components/features/UserDashboard/ReferralRewards/ReferralsChart/ReferralsChart'
 import React from 'react'
 
 export default function ReferralRewardsPage() {
   return (
     <div className='fade-in'>
-
-        <div className='flex flex-col gap-4'>
-            <h1 className='text-2xl font-bold'>Referral Rewards</h1>
-        </div>
+      <ReferralsChart/>
+      <ReferralRewardsLists />
     </div>
   )
 }
