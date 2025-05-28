@@ -1,7 +1,10 @@
+"use client";
 import doller from "@/public/images/homeImages/doller.svg";
 import noice from "@/public/noice.jpg";
+import { useRouter } from "next/navigation";
 
 const PlanCard = ({ soldOut }: { soldOut: boolean }) => {
+  const router = useRouter();
   return (
     <div className="relative">
       <div
@@ -76,7 +79,7 @@ const PlanCard = ({ soldOut }: { soldOut: boolean }) => {
           </li>
         </ul>
 
-        <button className="card-btn relative z-10">Invest Now</button>
+        <button onClick={() => router.push("/plans/id")} className="card-btn relative z-10">Invest Now</button>
       </div>
       {/* sold out */}
       {soldOut && (
