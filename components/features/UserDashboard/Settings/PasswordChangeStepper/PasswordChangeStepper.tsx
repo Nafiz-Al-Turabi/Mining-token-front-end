@@ -145,12 +145,12 @@ const PasswordChangeStepper = () => {
   };
 
   return (
-    <div className="flex items-center justify-center rounded-3xl overflow-hidden border-b border-[#0c1411] relative">
+    <div className="flex items-center justify-center rounded-3xl overflow-hidden relative">
       <div
         style={{
           backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url('https://images.unsplash.com/photo-1557683311-eac922347aa1?w=800&h=600&fit=crop')`,
         }}
-        className="w-full p-4 md:p-8 bg-cover bg-top rounded-3xl overflow-hidden relative"
+        className="w-full px-4 md:px-8 py-8 lg:py-12 bg-cover bg-top rounded-3xl overflow-hidden relative"
       >
         <div
           className={`h-[611px] w-[611px] bg-[#00E889] rounded-full absolute -top-[149px] -right-[254px] blur-[200px] opacity-[0.05] group-hover:opacity-[0.2] transition-all duration-300`}
@@ -161,11 +161,9 @@ const PasswordChangeStepper = () => {
         
         <div>
           {/* Stepper Header */}
-          <div className="mb-16">
+          <div className="">
             <div className="flex items-start justify-between relative">
-              {/* Background dotted lines - layered approach */}
               <div className="max-w-[70%] absolute top-5 left-0 right-0 h-[2px] flex">
-                {/* Gray background dots for entire progress */}
                 <div
                   className="w-full h-full"
                   style={{
@@ -174,8 +172,6 @@ const PasswordChangeStepper = () => {
                     backgroundRepeat: "repeat-x",
                   }}
                 />
-                
-                {/* Green progress dots overlay */}
                 <div
                   className="absolute top-0 left-0 h-full transition-all duration-500 ease-in-out"
                   style={{
@@ -226,16 +222,13 @@ const PasswordChangeStepper = () => {
             </div>
           </div>
 
-          {/* Form Content */}
           <div>
             {renderStepContent()}
-
-            {/* Action Buttons */}
-            <div className="flex gap-6 mt-16 relative z-10">
+            <div className="flex gap-6 mt-6 relative z-10">
               <button
                 type="button"
                 onClick={handleClear}
-                className="p-3 w-[167px] bg-gray-700 hover:bg-gray-600 text-white font-semibold rounded-full transition-all text-base cursor-pointer duration-300"
+                className="p-3 w-[167px] btn text-white font-semibold rounded-full transition-all text-base cursor-pointer duration-300"
               >
                 Clear
               </button>
