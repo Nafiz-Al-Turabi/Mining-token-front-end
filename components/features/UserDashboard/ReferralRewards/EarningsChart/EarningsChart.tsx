@@ -43,7 +43,7 @@ export function EarningsChart() {
           <div className="flex flex-col justify-between gap-3 h-40">
             <div className="">
               <Image
-                src="/images/dashboardImages/frame2.svg"
+                src="/images/dashboardImages/frame10.svg"
                 alt="w-10 h-10"
                 width={40}
                 height={40}
