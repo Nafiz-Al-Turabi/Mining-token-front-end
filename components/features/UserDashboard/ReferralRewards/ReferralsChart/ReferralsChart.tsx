@@ -32,7 +32,7 @@ export function ReferralsChart() {
       style={{
         backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
       }}
-      className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden relative"
+      className="bg-cover bg-center bg-no-repeat rounded-3xl overflow-hidden relative mb-6"
     >
       <div
         className={`h-[348px] w-[348px] bg-[#00E889] rounded-full absolute -bottom-40 left-1/2 -translate-x-1/2 blur-[150px] opacity-[0.05] `}
