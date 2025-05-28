@@ -84,7 +84,7 @@ const WalletChart = () => {
                 </linearGradient>
               </defs>
 
-              <CartesianGrid strokeDasharray="3 3" stroke="#2c2c2c" />
+              <CartesianGrid horizontal={false} strokeDasharray="3 3" stroke="#2c2c2c" />
               <XAxis
                 dataKey="name"
                 stroke="#999"

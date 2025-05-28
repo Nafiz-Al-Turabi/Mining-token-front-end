@@ -72,7 +72,7 @@ export function EarningsChart() {
                   </linearGradient>
                 </defs>
 
-                <CartesianGrid vertical strokeDasharray="3 3" stroke="#333" />
+                <CartesianGrid horizontal={false} strokeDasharray="3 3" stroke="#333" />
                 <XAxis
                   dataKey="name"
                   stroke="#888"
