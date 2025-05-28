@@ -21,7 +21,7 @@ const data = [
   { name: "Tue", value: 100 },
   { name: "Wed", value: 150 },
   { name: "Thu", value: 50 },
-  { name: "Fri", value: 280 },
+  { name: "Fri", value: 20 },
   { name: "Sat", value: 70 },
   { name: "Sun", value: 60 },
 ];
@@ -50,7 +50,7 @@ export function ReferralsChart() {
               />
             </div>
             <div>
-              <div className="text-[1.75rem] font-bold">$50.00</div>
+              <div className="text-[1.75rem] font-bold mb-1">$50.00</div>
               <div className="text-muted-foreground text-sm">
                 Total Referrals
               </div>
@@ -67,7 +67,7 @@ export function ReferralsChart() {
                 {/* Gradient definition */}
                 <defs>
                   <linearGradient id="lineGradient" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#22c55e" stopOpacity={0.4} />
+                    <stop offset="0%" stopColor="#22c55e" stopOpacity={1} />
                     <stop offset="100%" stopColor="#22c55e" stopOpacity={0} />
                   </linearGradient>
                 </defs>
@@ -90,7 +90,8 @@ export function ReferralsChart() {
                 <Tooltip
                   content={({ active, payload, label }) =>
                     active && payload?.length ? (
-                      <div className="bg-[#1c1c1c] text-white p-2 rounded shadow text-sm">
+                      <div className="bg-[#1c1c1c] text-white p-2 rounded shadow text-sm relative">
+                        <div className="h-4 w-4 absolute bg-[#1c1c1c] top-1/2 -translate-y-1/2 -left-2 rotate-45 "/>
                         <p>{label}</p>
                         <p className="text-green-400 flex items-center gap-1">
                           <span className="text-2xl">•</span>${payload[0].value}
