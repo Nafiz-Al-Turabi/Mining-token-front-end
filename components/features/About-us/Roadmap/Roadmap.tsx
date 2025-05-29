@@ -63,6 +63,9 @@ export default function Roadmap() {
           ))}
         </div>
       </div>
+     
+      <img src="/images/aboutUs/bg-wire3.svg" alt="" className="hidden md:block absolute bottom-0 left-0 " />
+      <img src="/images/aboutUs/bg-wire4.svg" alt="" className="hidden md:block absolute bottom-0 right-0 " />
     </section>
   );
 }

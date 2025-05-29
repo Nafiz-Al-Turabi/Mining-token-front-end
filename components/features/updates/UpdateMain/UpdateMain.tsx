@@ -64,7 +64,11 @@ const UpdateMain = () => {
   };
 
   return (
-    <div className="py-20 lg:py-16 bg-[#000503]">
+    <div className="py-20 lg:py-16 bg-[#000503] relative">
+      <img src="/images/updatesImages/bg-wire.svg" alt="" className="hidden md:block absolute -top-1/3 left-0" />
+      <img src="/images/updatesImages/bg-wire2.svg" alt="" className="hidden md:block absolute -top-1/3 right-0 " />
+      <img src="/images/updatesImages/bg-wire3.svg" alt="" className="hidden md:block absolute -bottom-1/4 left-0 " />
+      <img src="/images/updatesImages/bg-wire4.svg" alt="" className="hidden md:block absolute -bottom-1/4 right-0 " />
       <div className="max-w-[1320px] mx-auto px-4">
         {isMobile ? (
           <Slider {...sliderSettings}>
