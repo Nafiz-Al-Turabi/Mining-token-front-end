@@ -34,7 +34,7 @@ const DepositLog = () => {
             <input 
                 type="text" 
                 defaultValue={remark}
-                className="w-full rounded-lg border border-gray-700 bg-[#0e0e0e] p-3 text-white focus:border-[#00e889] focus:outline-none placeholder:text-xs lg:placeholder:text-base" 
+                className="w-full rounded-lg border border-[#363636] bg-[#0e0e0e] p-3 text-white focus:border-[#00e889] focus:outline-none placeholder:text-xs lg:placeholder:text-base" 
             />
         </div>
     }
