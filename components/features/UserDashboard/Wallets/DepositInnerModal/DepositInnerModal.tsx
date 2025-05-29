@@ -90,7 +90,7 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
 
   return (
     <div
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm px-4 transition-all duration-300 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-black/30 backdrop-blur-sm px-4 transition-all duration-300 overflow-y-auto md:overflow-y-hidden py-10 md:py-0 ${
         isAnimating ? "opacity-100" : "opacity-0"
       }`}
       onClick={(e) => e.target === e.currentTarget && onCloseInnerModal()}
@@ -274,7 +274,7 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
               type="submit"
               className="rounded-full btn btn-primary px-8 py-2 font-medium text-black transition-all hover:shadow-lg hover:shadow-[#00e889]/25"
             >
-              Submit Deposit
+              Submit
             </button>
           </div>
         </form>
