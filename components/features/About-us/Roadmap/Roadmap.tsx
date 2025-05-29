@@ -48,7 +48,7 @@ export default function Roadmap() {
       <h2 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] mb-20 text-center font-semibold">
         Company <span className="bg-gradient-to-l from-[#00E889] to-[#078854] bg-clip-text text-transparent">Roadmap</span>
       </h2>
-      <div className="relative max-w-6xl mx-auto px-4">
+      <div className="relative max-w-6xl mx-auto px-4  z-10">
         {/* Timeline line */}
         <div className="absolute left-6 lg:left-1/2 transform lg:-translate-x-1/2 h-full w-[10px] bg-gray-300 z-0 overflow-hidden rounded-full">
           <motion.div
@@ -65,7 +65,7 @@ export default function Roadmap() {
       </div>
      
       <img src="/images/aboutUs/bg-wire3.svg" alt="" className="hidden md:block absolute bottom-0 left-0 " />
-      <img src="/images/aboutUs/bg-wire4.svg" alt="" className="hidden md:block absolute bottom-0 right-0 " />
+      <img src="/images/aboutUs/bg-wire4.svg" alt="" className="hidden md:block absolute bottom-1/3 right-0 " />
     </section>
   );
 }
