@@ -4,6 +4,7 @@ import noice from "@/public/noice.jpg";
 import Image from "next/image";
 import { MdArrowBackIosNew } from "react-icons/md";
 import { useForm } from "react-hook-form";
+import DepositInnerModal from "../DepositInnerModal/DepositInnerModal";
 
 interface DepositModalProps {
   isOpen: boolean;
@@ -16,6 +17,7 @@ interface DepositFormValues {
 }
 
 const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
+  const [showInnerModal, setShowInnerModal] = useState(false);
   const [show, setShow] = useState(false);
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -44,6 +46,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
 
   const onSubmit = (data: DepositFormValues) => {
     console.log("Form submitted:", data);
+    setShowInnerModal(true);
   };
 
   return (
@@ -68,7 +71,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
             onClick={onClose}
             className="text-xl font-semibold flex items-center gap-2 cursor-pointer hover:text-[#00e889] duration-300 uppercase"
           >
-              <MdArrowBackIosNew className="text-[#00e889]" />
+            <MdArrowBackIosNew className="text-[#00e889]" />
             DEPOSIT
           </button>
           <button
@@ -142,6 +145,10 @@ const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
           </div>
         </form>
       </div>
+      <DepositInnerModal
+        isOpenInnerModal={showInnerModal}
+        onCloseInnerModal={() => setShowInnerModal(false)}
+      />
     </div>
   );
 };
