@@ -4,9 +4,11 @@ import { FaPlus } from "react-icons/fa";
 import noice from "@/public/noice.jpg";
 import Link from "next/link";
 import DepositModal from "../DepositModal/DepositModal";
+import WithdrawModal from "../WithdrawModal/WithdrawModal";
 
 const WalletCard = () => {
   const [isDepositModalOpen, setIsDepositModalOpen] = useState(false);
+  const [isWithdrawModalOpen, setIsWithdrawModalOpen] = useState(false);
   return (
     <div className="">
       <div
@@ -65,12 +67,13 @@ const WalletCard = () => {
           <button className="flex-1 btn btn-primary" onClick={() => setIsDepositModalOpen(true)}>
             Deposit
           </button>
-          <button className="flex-1 py-2 border border-[#00e889] hover:bg-[#00e889]/20 rounded-full font-semibold shadow-md cursor-pointer duration-300 ease-in-out">
+          <button onClick={()=>setIsWithdrawModalOpen(true)} className="flex-1 py-2 border border-[#00e889] hover:bg-[#00e889]/20 rounded-full font-semibold shadow-md cursor-pointer duration-300 ease-in-out">
             Withdrawal
           </button>
         </div>
       </div>
       <DepositModal isOpen={isDepositModalOpen} onClose={() => setIsDepositModalOpen(false)} />
+      <WithdrawModal isOpen={isWithdrawModalOpen} onClose={() => setIsWithdrawModalOpen(false)} />
     </div>
   );
 };
