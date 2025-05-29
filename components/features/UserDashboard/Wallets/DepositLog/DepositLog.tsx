@@ -29,6 +29,15 @@ const DepositLog = () => {
         )
        
     }
+    const remarkFormat = (remark:string) => {
+        return <div>
+            <input 
+                type="text" 
+                defaultValue={remark}
+                className="w-full rounded-lg border border-gray-700 bg-[#0e0e0e] p-3 text-white focus:border-[#00e889] focus:outline-none placeholder:text-xs lg:placeholder:text-base" 
+            />
+        </div>
+    }
   const data = [
     {
       created_at: "2021-01-01",
@@ -51,6 +60,7 @@ const DepositLog = () => {
   const formattedData = data.map((item) => ({
     ...item,
     status: formatStatus(item.status),
+    remark: remarkFormat(item.remark),
 }));
   const columns: TableColumn[] = [
     { key: "created_at", label: "Date", type: "text" },
