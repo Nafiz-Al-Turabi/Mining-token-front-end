@@ -4,8 +4,12 @@ import React from "react";
 
 export default function PurchaseNotice() {
   return (
-    <section className=" bg-[#000503] text-white px-4 py-12 ">
-      <div className="max-w-[1320px] mx-auto px-0 xl:px-4 ">
+    <section className=" bg-[#000503] text-white px-4 py-12 relative">
+      <img src="/images/plansImages/bg-wire5.svg" alt="" className="hidden md:block absolute -top-1/2 left-0" />
+      <img src="/images/plansImages/bg-wire6.svg" alt="" className="hidden md:block absolute -top-1/2 right-0 opacity-5" />
+      <img src="/images/plansImages/bg-wire7.svg" alt="" className="hidden md:block absolute -bottom-[90%] left-0 opacity-5" />
+      <img src="/images/plansImages/bg-wire8.svg" alt="" className="hidden md:block absolute -bottom-[90%] right-0 opacity-5" />
+      <div className="max-w-[1320px] mx-auto px-0 xl:px-4 relative z-20">
         <h1 className="text-[2rem] sm:text-[3rem] lg:text-[4rem]  font-semibold">
           Purchase <span className="bg-gradient-to-t from-[#067549] to-[#00E889] bg-clip-text text-transparent">Notice</span>
         </h1>
