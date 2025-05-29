@@ -221,7 +221,7 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
               </label>
               <input
                 type="text"
-                placeholder="Enter transaction ID"
+                placeholder="Enter transaction ID" 
                 {...register("txid", {
                   required: "Transaction ID is required",
                 })}
