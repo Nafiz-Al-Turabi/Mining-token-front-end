@@ -30,13 +30,15 @@ const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
 
   useEffect(() => {
     if (isOpen) {
-      setIsAnimating(true);
-      setShow(true);
+      setShow(true); // modal render করে ফেলো
+      setTimeout(() => {
+        setIsAnimating(true); // তারপর animate করাও
+      }, 10); // 10ms delay enough
     } else {
       setIsAnimating(false);
       const timer = setTimeout(() => {
         setShow(false);
-        reset(); // reset form on close
+        reset();
       }, 300);
       return () => clearTimeout(timer);
     }

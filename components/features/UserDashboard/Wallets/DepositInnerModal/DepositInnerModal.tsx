@@ -147,15 +147,13 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
           className="relative z-10 space-y-4"
         >
           <div className="grid grid-cols-2 gap-4">
-            {/* Network Selection */}
+            {/* Network */}
             <div>
               <label className="mb-2 block text-[0.7rem] lg:text-sm font-medium">
                 Deposit Network <span className="text-red-400">*</span>
               </label>
               <select
-                {...register("network", {
-                  required: "Network selection is required",
-                })}
+                {...register("network")}
                 className="w-full text-xs lg:text-base rounded-lg border border-gray-700 bg-[#0e0e0e] p-4 text-gray-400 focus:border-[#00e889] focus:outline-none placeholder:text-xs lg:placeholder:text-base"
               >
                 <option value="">Select Network</option>
@@ -165,11 +163,6 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
                   </option>
                 ))}
               </select>
-              {errors.network && (
-                <p className="mt-1 text-sm text-red-400">
-                  {errors.network.message}
-                </p>
-              )}
             </div>
 
             <div>
@@ -179,20 +172,9 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
               <input
                 type="text"
                 placeholder="0.00777700"
-                {...register("depositAmount", {
-                  required: "Deposit amount is required",
-                  pattern: {
-                    value: /^\d*\.?\d+$/,
-                    message: "Please enter a valid amount",
-                  },
-                })}
+                {...register("depositAmount")}
                 className="w-full rounded-lg border border-gray-700 bg-[#0e0e0e] p-3 text-white focus:border-[#00e889] focus:outline-none placeholder:text-xs lg:placeholder:text-base"
               />
-              {errors.depositAmount && (
-                <p className="mt-1 text-sm text-red-400">
-                  {errors.depositAmount.message}
-                </p>
-              )}
             </div>
 
             <div>
@@ -202,40 +184,25 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
               <input
                 type="text"
                 placeholder="Enter wallet address"
-                {...register("walletAddress", {
-                  required: "Wallet address is required",
-                })}
+                {...register("walletAddress")}
                 className="w-full rounded-lg border border-gray-700 bg-[#0e0e0e] p-3 text-white focus:border-[#00e889] focus:outline-none placeholder:text-xs lg:placeholder:text-base"
               />
-              {errors.walletAddress && (
-                <p className="mt-1 text-sm text-red-400">
-                  {errors.walletAddress.message}
-                </p>
-              )}
             </div>
 
-            {/* TXID */}
             <div>
               <label className="mb-2 block text-[0.7rem] lg:text-sm font-medium">
                 TXID<span className="text-red-400">*</span>
               </label>
               <input
                 type="text"
-                placeholder="Enter transaction ID" 
-                {...register("txid", {
-                  required: "Transaction ID is required",
-                })}
+                placeholder="Enter transaction ID"
+                {...register("txid")}
                 className="w-full rounded-lg border border-gray-700 bg-[#0e0e0e] p-3 text-white focus:border-[#00e889] focus:outline-none placeholder:text-xs lg:placeholder:text-base"
               />
-              {errors.txid && (
-                <p className="mt-1 text-sm text-red-400">
-                  {errors.txid.message}
-                </p>
-              )}
             </div>
           </div>
 
-          {/* Payment Voucher Upload */}
+          {/* Voucher Upload */}
           <div>
             <label className="mb-2 block text-[0.7rem] lg:text-sm font-medium">
               Payment Voucher
@@ -285,7 +252,7 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
             </div>
           </div>
 
-          {/* Information Note */}
+          {/* Info Note */}
           <div className="">
             <p className="text-[0.7rem] lg:text-sm text-gray-300">
               <strong>Important:</strong> After confirming your transfer, please
@@ -294,7 +261,7 @@ const DepositInnerModal: React.FC<DepositInnerModalProps> = ({
             </p>
           </div>
 
-          {/* Action Buttons */}
+          {/* Actions */}
           <div className="flex  gap-4 pt-4">
             <button
               type="button"
