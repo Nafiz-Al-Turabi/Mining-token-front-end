@@ -1,48 +1,48 @@
 import React from "react";
-import image from "@/public/images/homeImages/authkit.svg";
-import image2 from "@/public/images/homeImages/Frame 2147227099 (1).svg";
-import image3 from "@/public/images/homeImages/Frame 2147227099 (2).svg";
-import image4 from "@/public/images/homeImages/Frame 2147227099 (3).svg";
-import image5 from "@/public/images/homeImages/Frame 2147227099 (4).svg";
-import image6 from "@/public/images/homeImages/Frame 2147227099 (5).svg";
+import image from "@/public/images/homeImages/Frame 2147227099 (7).svg";
+import image2 from "@/public/images/homeImages/Frame 2147227099 (8).svg";
+import image3 from "@/public/images/homeImages/Frame 2147227099 (9).svg";
+import image4 from "@/public/images/homeImages/Frame 2147227099 (10).svg";
+import image5 from "@/public/images/homeImages/Frame 2147227099 (11).svg";
+import image6 from "@/public/images/homeImages/Frame 2147227099 (12).svg";
 import "./WhatIsMining.css";
 
 const miningFeatures = [
   {
-    title: "AuthKit",
+    title: "Decentralized",
     image: image,
     description:
-      "AuthKit is a platform that allows you to create and manage your own AI cloud mining.",
+      "Blockchain structure eliminating single-point risks.",
   },
   {
-    title: "WorkOS",
+    title: "Zero Human Intervention",
     image: image2,
     description:
-      "Advanced security ensures all your data and mining assets are protected with industry-grade encryption.",
+      "Fully AI-driven, no human input required.",
   },
   {
-    title: "User Management",
+    title: "Transparent Smart Contracts",
     image: image3,
     description:
-      "Get predictive analytics and actionable insights to optimize your cloud mining operations.",
+      "Transparent contracts executed automatically and securely.",
   },
   {
-    title: "Your Application",
+    title: "Multi-layer Asset Security",
     image: image4,
     description:
-      "Easily scale your mining setup to meet your computational needs without compromising performance.",
+      "Multi-layer encryption ensures asset security.",
   },
   {
-    title: "Your Database ",
+    title: "Zero Hardware Investment",
     image: image5,
     description:
-      "Track your mining progress in real-time with detailed analytics dashboards.",
+      "Instant cloud mining without hardware.",
   },
   {
-    title: "Events API",
+    title: "Intelligent Optimized Allocation",
     image: image6,
     description:
-      "Easily integrate with your existing tools and platforms for a unified workflow.",
+      "Real-time AI optimization of hashrate and energy efficiency.",
   },
 ];
 

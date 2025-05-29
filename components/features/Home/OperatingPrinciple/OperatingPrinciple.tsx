@@ -42,32 +42,32 @@ const CustomPrevArrow = ({ onClick }: any) => (
 // Data
 const operatingPrincipleData = [
   {
-    title: "Earnings & Principal Return",
+    title: "Register and Fund Your Account",
     description:
-      "Customers can choose to withdraw daily earnings or reinvest. Upon contract maturity, the principal is returned, with the option to withdraw or renew the contract.",
+      "Create an account on the platform and deposit funds through various supported methods to prepare for purchasing mining plans.",
     image: "/images/homeImages/operating.svg",
   },
   {
-    title: "Smart Contract Allocation",
+    title: "Purchase a Mining Contract",
     description:
-      "Funds are allocated to cloud mining operations and digital financial ecosystem to ensure efficient utilization and optimized returns.",
+      "Choose a contract that fits your budget and goals — each plan varies in duration, investment amount, and daily returns.",
     image: "/images/homeImages/operating2.svg",
   },
   {
-    title: "Cloud Mining Starts",
+    title: "Smart Contract Allocation & Resource Management",
     description:
-      "AI-powered algorithm optimizes hash rate allocation, enhances mining efficiency, and reduces power consumption for stable operations.",
+      "Your funds are automatically allocated by smart contracts across cloud mining infrastructure and the platform’s digital finance ecosystem, ensuring efficient resource use and optimized returns.",
     image: "/images/homeImages/operating3.svg",
   },
   {
-    title: "Profit Distribution",
+    title: "Daily Profit Distribution & Capital Return",
     description:
-      "Of the total revenue, 87% is allocated to customer earnings, while 13% is allocated to the platform.",
+      "You’ll receive stable daily earnings throughout the contract period. Upon maturity, your original investment (if refundable under the plan) will be returned in full.",
     image: "/images/homeImages/operating4.svg",
   },
   {
-    title: "Purchase Mining Contract",
-    description: "The customer selects a mining plan and invests funds.",
+    title: "Withdraw Profits or Reinvest",
+    description: "You can withdraw your capital and earnings anytime, or choose to reinvest in new contracts to maximize long-term gains through compounding.",
     image: "/images/homeImages/operating5.svg",
   },
 ];
