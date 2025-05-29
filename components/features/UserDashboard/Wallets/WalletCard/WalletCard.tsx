@@ -1,9 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 import { FaPlus } from "react-icons/fa";
 import noice from "@/public/noice.jpg";
 import Link from "next/link";
+import DepositModal from "../DepositModal/DepositModal";
 
 const WalletCard = () => {
+  const [isDepositModalOpen, setIsDepositModalOpen] = useState(false);
   return (
     <div className="">
       <div
@@ -59,7 +62,7 @@ const WalletCard = () => {
 
         {/* Actions */}
         <div className="flex gap-4 mt-6 relative z-10">
-          <button className="flex-1 btn btn-primary">
+          <button className="flex-1 btn btn-primary" onClick={() => setIsDepositModalOpen(true)}>
             Deposit
           </button>
           <button className="flex-1 py-2 border border-[#00e889] hover:bg-[#00e889]/20 rounded-full font-semibold shadow-md cursor-pointer duration-300 ease-in-out">
@@ -67,6 +70,7 @@ const WalletCard = () => {
           </button>
         </div>
       </div>
+      <DepositModal isOpen={isDepositModalOpen} onClose={() => setIsDepositModalOpen(false)} />
     </div>
   );
 };
