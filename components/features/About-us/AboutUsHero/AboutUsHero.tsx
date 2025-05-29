@@ -25,19 +25,19 @@ const AboutUsHero = () => {
             <div className="bg-white/20 backdrop-blur-lg rounded-2xl flex items-center gap-2 md:gap-4 p-2 xl:p-4 relative border-b border-[#00E889]/50">
               <div className="bgrad"></div>
               <div className="overflow-hidden  w-[64px] h-[64px] rounded-b-lg flex items-center justify-center relative ">
-                <img src="/images/hero/users.svg" alt="expert-team" className="w-10 sm:w-full h-10 sm:h-full" />
+                <img src="/images/hero/24.svg" alt="expert-team" className="w-10 sm:w-full h-10 sm:h-full" />
               </div>
-              <h3 className="text-xs lg:text-sm xl:text-xl font-bold">Expert Team</h3>
+              <h3 className="text-xs lg:text-sm xl:text-xl font-bold"> 24/7 Global Support</h3>
             </div>
           </div>
           <div className="">
             <div className="bg-white/20 backdrop-blur-lg rounded-2xl flex items-center gap-2 md:gap-4 p-2 xl:p-4 relative border-b border-[#00E889]/50">
               <div className="bgrad"></div>
               <div className="overflow-hidden  w-[64px] h-[64px] rounded-b-lg flex items-center justify-center relative ">
-                <img src="/images/hero/dollar.svg" alt="expert-team" className="w-10 sm:w-full h-10 sm:h-full" />
+                <img src="/images/hero/ai.svg" alt="expert-team" className="w-10 sm:w-full h-10 sm:h-full" />
               </div>
               <h3 className="text-xs lg:text-sm xl:text-xl font-bold">
-                Automated Earning
+              AI Smart Allocation
               </h3>
             </div>
           </div>
@@ -48,17 +48,17 @@ const AboutUsHero = () => {
                 <img src="/images/hero/dollarhand.svg" alt="expert-team" className="w-10 sm:w-full h-10 sm:h-full" />
                 
               </div>
-              <h3 className="text-xs lg:text-sm xl:text-xl font-bold">EasyMining</h3>
+              <h3 className="text-xs lg:text-sm xl:text-xl font-bold">Earnings Guarantee</h3>
             </div>
           </div>
           <div className="">
             <div className="bg-white/20 backdrop-blur-lg rounded-2xl flex items-center gap-2 md:gap-4 p-2 xl:p-4 relative border-b border-[#00E889]/50">
               <div className="bgrad"></div>
               <div className="overflow-hidden  w-[64px] h-[64px] rounded-b-lg flex items-center justify-center relative ">
-                <img src="/images/hero/dollarbag.svg" alt="expert-team" className="w-10 sm:w-full h-10 sm:h-full" />
+                <img src="/images/hero/green-energy.svg" alt="expert-team" className="w-10 sm:w-full h-10 sm:h-full" />
               </div>
               <h3 className="text-xs lg:text-sm xl:text-xl font-bold">
-                100% Money Security
+              100% Green Energy
               </h3>
             </div>
           </div>
