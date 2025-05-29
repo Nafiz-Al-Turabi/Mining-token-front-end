@@ -8,6 +8,7 @@ import RecentDepositsWithdraws from "@/components/features/Home/RecentDepositsWi
 import News from "@/components/features/Home/news/news";
 import FAQ from "@/components/features/Home/FAQ/FAQ";
 import AboutCompany from "@/components/features/Home/AboutCompany/AboutCompany";
+import WhyChooseHEXminer from "@/components/features/Home/WhyChooseHEXminer/WhyChooseHEXminer";
 export default function MainPage() {
   return (
     <div className=' fade-in'>
@@ -15,6 +16,7 @@ export default function MainPage() {
       <WhatIsMining />
       <HowToStartMining />
       <Plan />
+      <WhyChooseHEXminer />
       <OperatingPrinciple />
       <OurBusinessModel />
       <RecentDepositsWithdraws />
