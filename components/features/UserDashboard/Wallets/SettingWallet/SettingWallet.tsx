@@ -3,10 +3,12 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { Eye, EyeOff, ChevronLeft } from "lucide-react";
 import noice from "@/public/noice.jpg";
+import { useRouter } from "next/navigation";
 
 export default function SettingWallet() {
   const [showPassword, setShowPassword] = useState(false);
   const [useDefaultPassword, setUseDefaultPassword] = useState(true);
+  const router = useRouter();
 
   const {
     register,
@@ -63,9 +65,9 @@ export default function SettingWallet() {
       />
       <div className=" p-4 md:p-6 lg:p-12 relative z-10">
         {/* Header */}
-        <div className="flex items-center mb-8 pt-2">
-          <ChevronLeft className="w-6 h-6 text-green-400 mr-2" />
-          <h1 className="text-2xl font-normal">SettingWallet</h1>
+        <div onClick={()=>router.back()} className="flex items-center mb-8 pt-2 cursor-pointer">
+          <ChevronLeft className="w-6 h-6 text-[#00e889] mr-2" />
+          <h1 className="text-2xl font-normal">Wallet</h1>
         </div>
 
         {/* Form */}
@@ -81,7 +83,7 @@ export default function SettingWallet() {
               })}
               type="text"
               placeholder="Withdraw Network"
-              className="w-full py-3 bg-[#0e0e0e] border border-[#3a3a3a] rounded-xl px-4 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-green-400 transition-colors"
+              className="w-full py-3 bg-[#0e0e0e] border border-[#3a3a3a] rounded-xl px-4 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#00e889] transition-colors"
             />
             {errors.withdrawNetwork && (
               <span className="text-red-500 text-xs mt-1">
@@ -101,7 +103,7 @@ export default function SettingWallet() {
               })}
               type="text"
               placeholder="Type Here..."
-              className="w-full py-3 bg-[#0e0e0e] border border-[#3a3a3a] rounded-xl px-4 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-green-400 transition-colors"
+              className="w-full py-3 bg-[#0e0e0e] border border-[#3a3a3a] rounded-xl px-4 text-white text-sm placeholder-gray-500 focus:outline-none focus:border-[#00e889] transition-colors"
             />
             {errors.walletAddress && (
               <span className="text-red-500 text-xs mt-1">
@@ -121,7 +123,7 @@ export default function SettingWallet() {
                   required: "This field is required",
                 })}
                 type={showPassword ? "text" : "password"}
-                className="w-full py-3 bg-[#0e0e0e] border border-[#3a3a3a] rounded-xl px-4 pr-12 text-white text-sm focus:outline-none focus:border-green-400 transition-colors"
+                className="w-full py-3 bg-[#0e0e0e] border border-[#3a3a3a] rounded-xl px-4 pr-12 text-white text-sm focus:outline-none focus:border-[#00e889] transition-colors"
                 value={
                   useDefaultPassword ? "123456" : undefined
                 }
@@ -150,7 +152,7 @@ export default function SettingWallet() {
                   onChange={(e) =>
                     handleDefaultPasswordChange(e.target.checked)
                   }
-                  className="w-5 h-5 bg-[#0e0e0e] border border-[#3a3a3a] rounded focus:ring-0 focus:ring-offset-0 text-green-400 appearance-none checked:bg-green-400 checked:border-green-400"
+                  className="w-5 h-5 bg-[#0e0e0e] border border-[#3a3a3a] rounded focus:ring-0 focus:ring-offset-0 text-[#00e889] appearance-none checked:bg-[#00e889] checked:border-green-400"
                 />
                 {useDefaultPassword && (
                   <svg
@@ -185,7 +187,7 @@ export default function SettingWallet() {
             <button
               type="button"
               onClick={handleClear}
-              className="md:w-42 px-8 py-3 bg-transparent border border-green-400 text-green-400 rounded-full font-normal text-base hover:bg-green-400 hover:text-black transition-all duration-200 cursor-pointer"
+              className="md:w-42 px-8 py-3 bg-transparent border border-[#00e889] text-[#00e889] rounded-full font-normal text-base hover:bg-[#00e889]/20 hover:text-white transition-all duration-200 cursor-pointer"
             >
               Clear
             </button>

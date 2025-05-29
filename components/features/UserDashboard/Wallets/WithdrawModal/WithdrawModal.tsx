@@ -48,9 +48,7 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ isOpen, onClose }) => {
     console.log("Form submitted:", data);
   };
 
-  const clearForm = () => {
-    reset();
-  };
+ 
 
   return (
     <div
@@ -158,7 +156,7 @@ const WithdrawModal: React.FC<WithdrawModalProps> = ({ isOpen, onClose }) => {
           <div className="flex gap-4 mt-6 relative z-10">
             <button
               type="button"
-              onClick={clearForm}
+              onClick={()=>reset()}
               className="w-[167px] py-2 rounded-full border border-[#00e889] text-[#00e889] hover:bg-green-900 cursor-pointer"
             >
               Clear
