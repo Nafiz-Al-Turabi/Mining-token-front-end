@@ -95,7 +95,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
         >
           <div>
             <label className="text-base md:text-lg font-medium block mb-3">
-              Deposit Network*
+              Deposit Network<span className="text-red-500">*</span>
             </label>
             <select
               {...register("network", { required: true })}
@@ -112,13 +112,13 @@ const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
 
           <div>
             <label className="text-base md:text-lg font-medium block mb-3">
-              Amount*
+              Amount<span className="text-red-500">*</span>
             </label>
             <input
-              type="text"
+              type="number"
               placeholder="$00132"
               {...register("amount", { required: true })}
-              className="w-full p-4 rounded-lg bg-[#0e0e0e] text-white border border-gray-700 focus:outline-none"
+              className="w-full p-4 rounded-lg bg-[#0e0e0e] text-white border border-gray-700 focus:outline-none [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
             />
             {errors.amount && (
               <p className="text-red-500 text-sm mt-1">Amount is required</p>
