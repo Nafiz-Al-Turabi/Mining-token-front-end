@@ -17,15 +17,16 @@ const HeroSection = () => {
       <div className="max-w-[1320px] mx-auto flex flex-col justify-center h-full px-4 2xl:px-0">
         <div className="flex relative lg:mt-32">
           <div>
-            <h1 className="text-[2rem] sm:text-[3rem] lg:text-[4rem] xl:text-6xl font-bold text-center lg:text-left mb-4 uppercase leading-[120%] lg:w-[20ch]">
+            <h1 className="text-[2rem] sm:text-[3rem] font-bold text-center lg:text-left mb-4 uppercase leading-[120%] lg:w-[20ch]">
               Connect to Global{" "}
               <span className="bg-gradient-to-l from-[#067549] to-[#00E889] bg-clip-text text-transparent">
-                Green Hashpower
+                Green HashPower <br />
               </span>{" "}
-              and Start the AI Cloud Mining Era
+              Start AI Cloud Mining Era
             </h1>
             <p className="text-[1.37rem] bg-gradient-to-l text-center lg:text-left  lg:w-[40ch] from-[#ffffff] to-[#00E889] bg-clip-text text-transparent tracking-widest ">
-            Next Gen AI Cloud Miner with No Hardware and One Tap Bitcoin Mining
+              Next Gen AI Cloud Miner with No Hardware and One Tap Bitcoin
+              Mining
             </p>
             <div className="flex justify-center lg:justify-start gap-4 mt-6 lg:mt-12">
               <a
@@ -75,59 +76,43 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="hidden lg:grid grid-cols-2 gap-2 xl:block w-full relative">
-            <div className="xl:absolute -bottom-6 left-0">
+            <div className="xl:absolute bottom-6 left-0">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl flex flex-col justify-center gap-4 p-6 relative border-b border-[#00E889]/50">
                 <div className="bgrad"></div>
                 <div className="overflow-hidden  w-[64px] h-[64px] rounded-b-lg flex items-center justify-center relative ">
-                  <img src="/images/hero/users.svg" alt="expert-team" />
-                  <FaUserGroup
-                    size={32}
-                    className="text-[#00e889] relative z-10"
-                  />
+                  <img src="/images/hero/24.svg" alt="expert-team" />
                 </div>
-                <h3 className="lg:text-sm xl:text-xl font-bold">Expert Team</h3>
+                <h3 className="lg:text-sm xl:text-xl font-bold">24/7 Global Support</h3>
               </div>
             </div>
             <div className="xl:absolute bottom-10 right-0">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl flex flex-col justify-center gap-4 p-6 relative border-b border-[#00E889]/50">
                 <div className="bgrad"></div>
                 <div className="overflow-hidden  w-[64px] h-[64px] rounded-b-lg flex items-center justify-center relative ">
-                  <img src="/images/hero/dollar.svg" alt="expert-team" />
-                  <BiSolidBadgeDollar
-                    size={32}
-                    className="text-[#00e889] relative z-10"
-                  />
+                  <img src="/images/hero/ai.svg" alt="expert-team" />
                 </div>
                 <h3 className="lg:text-sm xl:text-xl font-bold">
-                  Automated Earning
+                AI Smart Allocation
                 </h3>
               </div>
             </div>
-            <div className="xl:absolute top-0 right-0 2xl:-right-20">
+            <div className="xl:absolute top-10 right-0 2xl:-right-20">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl flex flex-col justify-center gap-4 p-6 relative border-b border-[#00E889]/50">
                 <div className="bgrad"></div>
                 <div className="overflow-hidden  w-[64px] h-[64px] rounded-b-lg flex items-center justify-center relative ">
                   <img src="/images/hero/dollarhand.svg" alt="expert-team" />
-                  <FaHandHoldingDollar
-                    size={32}
-                    className="text-[#00e889] relative z-10"
-                  />
                 </div>
-                <h3 className="lg:text-sm xl:text-xl font-bold">EasyMining</h3>
+                <h3 className="lg:text-sm xl:text-xl font-bold">Earnings Guarantee</h3>
               </div>
             </div>
-            <div className="xl:absolute -top-0 left-0 2xl:left-20">
+            <div className="xl:absolute top-5 left-0 2xl:left-20">
               <div className="bg-white/20 backdrop-blur-lg rounded-2xl flex flex-col justify-center gap-4 p-6 relative border-b border-[#00E889]/50">
                 <div className="bgrad"></div>
                 <div className="overflow-hidden  w-[64px] h-[64px] rounded-b-lg flex items-center justify-center relative ">
-                  <img src="/images/hero/dollarbag.svg" alt="expert-team" />
-                  <FaSackDollar
-                    size={32}
-                    className="text-[#00e889] relative z-10"
-                  />
+                  <img src="/images/hero/green-energy.svg" alt="expert-team" />
                 </div>
                 <h3 className="lg:text-sm xl:text-xl font-bold">
-                  100% Money Security
+                  100% Green Energy
                 </h3>
               </div>
             </div>
