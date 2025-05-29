@@ -23,7 +23,7 @@ const RefferralCode = () => {
       style={{
         backgroundImage: `linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), radial-gradient(147.4% 50% at 50% 50%, rgba(14, 14, 14, 0.00) 0%, #0E0E0E 100%), url(${bgImage.src})`,
       }}
-      className="h-56 w-full bg-cover bg-center bg-no-repeat rounded-3xl flex items-center p-12 relative"
+      className="h-56 w-full bg-cover bg-center bg-no-repeat rounded-3xl flex items-center p-12 relative mb-6"
     >
       <div className="relative z-10 flex justify-between items-center w-full">
         <div>
