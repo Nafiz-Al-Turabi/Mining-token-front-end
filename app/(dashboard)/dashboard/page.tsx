@@ -9,8 +9,8 @@ export default function DashboardPage() {
     <div className="fade-in">
       <Overview />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <RewardChart />
         <TrialFundChart />
+        <RewardChart />
       </div>
       <OverviewTable />
     </div>
