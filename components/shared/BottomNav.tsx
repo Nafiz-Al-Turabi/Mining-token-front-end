@@ -1,23 +1,25 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { FaArtstation} from "react-icons/fa";
+import { FaArtstation } from "react-icons/fa";
 import noice from "@/public/noice.jpg";
 import HomeIcon from "@/components/icons/HomeIcon";
 import PlansIcon from "@/components/icons/PlansIcon";
 import GuideIcon from "@/components/icons/GuideIcon";
 import BonusIcon from "@/components/icons/BonusIcon";
 import StatsIcon from "../icons/StatsIcon";
+import DepositModal from "../features/UserDashboard/Wallets/DepositModal/DepositModal";
 const NAV_ITEMS = [
   { href: "/", icon: <HomeIcon />, label: "Home" },
   { href: "/plans", icon: <PlansIcon />, label: "Plans" },
-  { href: "/guide", icon: <GuideIcon />, label: "Guide" },
+  { href: "", icon: <GuideIcon />, label: "Deposit" },
   { href: "/bonus", icon: <BonusIcon />, label: "Bonus" },
 ];
 
 const BottomNav = () => {
+  const [depositModal, setDepositModal] = useState(false);
   const pathname = usePathname();
 
   const isActive = (path: string) => pathname === path;
@@ -40,11 +42,12 @@ const BottomNav = () => {
         <div className="h-[200px] w-[200px] bg-[#00E889] rounded-full absolute -bottom-10 -right-20 opacity-[0.1] blur-[50px] transition-all duration-300"></div>
 
         <div className="flex justify-between items-center w-full relative z-10">
+          {/* LEFT ITEMS: Home + Plans */}
           {NAV_ITEMS.slice(0, 2).map(({ href, icon, label }) => (
             <Link
               key={href}
               href={href}
-              className={`flex flex-col items-center text-[8px] font-semibold transition-colors duration-200 ${
+              className={`inline-flex flex-col items-center text-[8px] font-semibold transition-colors duration-200 ${
                 isActive(href) ? "text-[#00E889]" : "text-[#009658]"
               }`}
             >
@@ -53,7 +56,7 @@ const BottomNav = () => {
             </Link>
           ))}
 
-          {/* Center Floating Icon */}
+          {/* CENTER ICON */}
           <Link
             href="/artstation"
             className={`w-[40px] h-[40px] bg-white/10 backdrop-blur-3xl border border-[#424242] rounded-full flex items-center justify-center relative overflow-hidden ${
@@ -68,20 +71,39 @@ const BottomNav = () => {
             />
           </Link>
 
-          {NAV_ITEMS.slice(2).map(({ href, icon, label }) => (
-            <Link
-              key={href}
-              href={href}
-              className={`flex flex-col items-center text-[8px] font-semibold transition-colors duration-200 ${
-                isActive(href) ? "text-[#00E889]" : "text-[#009658]"
-              }`}
-            >
-              {icon}
-              {label}
-            </Link>
-          ))}
+          {/* RIGHT ITEMS: Deposit (button) + Bonus */}
+          {NAV_ITEMS.slice(2).map(({ href, icon, label }) =>
+            label === "Deposit" ? (
+              <button
+                key={label}
+                type="button"
+                onClick={() => setDepositModal(true)}
+                className={`inline-flex flex-col items-center text-[8px] font-semibold transition-colors duration-200 ${
+                  isActive(href) ? "text-[#00E889]" : "text-[#009658]"
+                } bg-transparent border-none outline-none appearance-none`}
+              >
+                {icon}
+                {label}
+              </button>
+            ) : (
+              <Link
+                key={href}
+                href={href}
+                className={`inline-flex flex-col items-center text-[8px] font-semibold transition-colors duration-200 ${
+                  isActive(href) ? "text-[#00E889]" : "text-[#009658]"
+                }`}
+              >
+                {icon}
+                {label}
+              </Link>
+            )
+          )}
         </div>
       </div>
+      <DepositModal
+        isOpen={depositModal}
+        onClose={() => setDepositModal(false)}
+      />
     </div>
   );
 };
