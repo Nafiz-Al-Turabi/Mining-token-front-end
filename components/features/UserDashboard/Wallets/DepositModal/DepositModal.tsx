@@ -71,7 +71,7 @@ const DepositModal: React.FC<DepositModalProps> = ({ isOpen, onClose }) => {
         <div className="flex items-center justify-between mb-4">
           <button
             onClick={onClose}
-            className="text-xl font-semibold flex items-center gap-2 cursor-pointer hover:text-[#00e889] duration-300 uppercase"
+            className="text-xl font-semibold flex items-center gap-2 cursor-pointer hover:text-[#00e889] duration-300 uppercase relative z-10"
           >
             <MdArrowBackIosNew className="text-[#00e889]" />
             DEPOSIT
