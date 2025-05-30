@@ -42,11 +42,11 @@ const WalletChart = () => {
             <div className="flex items-center gap-6">
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-[#00FF7F] rounded-full"></div>
-                <div className="text-xs md:text-base text-gray-400">Deposit</div>
+                <div className="text-[0.5rem] md:text-base text-gray-400">Deposit</div>
               </div>
               <div className="flex items-center gap-2">
                 <div className="w-2 h-2 bg-[#2529D8] rounded-full"></div>
-                <div className="text-xs md:text-base text-gray-400">
+                <div className="text-[0.5rem] md:text-base text-gray-400">
                   Withdraw money
                 </div>
               </div>
