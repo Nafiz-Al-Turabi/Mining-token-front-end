@@ -2,8 +2,13 @@
 import noice from "@/public/noice.jpg";
 import Image from "next/image";
 import { IoTrendingDown, IoTrendingUp } from "react-icons/io5";
+import DepositModal from "../Wallets/DepositModal/DepositModal";
+import { useState } from "react";
+import WithdrawModal from "../Wallets/WithdrawModal/WithdrawModal";
 
 const Overview = () => {
+  const [depositModal, setDepositModal] = useState(false);
+  const [withdrawModal, setWithdrawModal] = useState(false);
   const OverviewData = [
     {
       id: 1,
@@ -24,6 +29,7 @@ const Overview = () => {
     {
       id: 3,
       title: "Total Deposit",
+      hyperlink:"deposit",
       amount: 50000.0,
       percentage: 25,
       growth: true,
@@ -33,6 +39,7 @@ const Overview = () => {
     {
       id: 4,
       title: "Total Withdraw",
+      hyperlink:"withdraw",
       amount: 6200.0,
       percentage: 20,
       growth: false,
@@ -92,7 +99,7 @@ const Overview = () => {
             {Overview.amount}
           </h2>
           <div className="text-xs md:text-base flex items-center justify-between">
-            <p>{Overview.title}</p>
+            <p className={`${Overview.hyperlink ? "cursor-pointer border-b hover:border-[#00E889] hover:text-[#00E889] duration-300 ease-in-out" : ""}`} onClick={() => Overview.hyperlink ? Overview.hyperlink === "deposit" ? setDepositModal(true) : setWithdrawModal(true) : null}>{Overview.title}</p>
             <p
               className={`flex items-center gap-1 text-xs ${
                 Overview.growth ? "text-[#00E889]" : "text-red-600"
@@ -125,6 +132,8 @@ const Overview = () => {
           </p>
         </div>
       </button>
+      <DepositModal isOpen={depositModal} onClose={() => setDepositModal(false)} />
+      <WithdrawModal isOpen={withdrawModal} onClose={() => setWithdrawModal(false)} />
     </div>
   );
 };
