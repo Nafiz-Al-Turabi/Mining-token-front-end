@@ -1,0 +1,43 @@
+[
+    {
+      "id": 1,
+      "Name": "John Doe",
+      "email": "johndoe@example.com",
+      "subject": "Inquiry about services",
+      "message": "I would like to know more about your services. Can you provide details on pricing and packages?",
+      "isRead": false
+    },
+    {
+      "id": 2,
+      "Name": "Jane Smith",
+      "email": "janesmith@example.com",
+      "subject": "Job application",
+      "message": "I am interested in applying for the open position. I have attached my resume for your review.",
+      "isRead": false
+    },
+    {
+      "id": 3,
+      "Name": "Michael Johnson",
+      "email": "michaelj@example.com",
+      "subject": "Feedback on recent purchase",
+      "message": "I recently purchased a product from your website and would like to provide some feedback regarding the quality.",
+      "isRead": true
+    },
+    {
+      "id": 4,
+      "Name": "Emily Davis",
+      "email": "emilydavis@example.com",
+      "subject": "Request for support",
+      "message": "I am experiencing issues with my account and need assistance to resolve them.",
+      "isRead": false
+    },
+    {
+      "id": 5,
+      "Name": "David Brown",
+      "email": "davidbrown@example.com",
+      "subject": "Partnership inquiry",
+      "message": "I am interested in discussing potential partnership opportunities with your company. Please let me know if you'd be open to a meeting.",
+      "isRead": false
+    }
+  ]
+  
