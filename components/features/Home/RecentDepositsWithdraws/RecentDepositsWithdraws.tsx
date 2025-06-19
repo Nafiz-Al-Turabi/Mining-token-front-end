@@ -1,7 +1,11 @@
+"use client"
+import { useState } from "react";
 import Marquee from "react-fast-marquee";
 import DWCard from "@/components/ui/Cards/DWCard";
 
 const RecentDepositsWithdraws = () => {
+  const [activeTab, setActiveTab] = useState("deposit");
+
   return (
     <div className="bg-[#000000] py-[60px] relative">
         <div className=" bg-gradient-to-r from-[#000000] via-[#00000000] to-[#000000] absolute inset-0 z-20"></div>
@@ -13,8 +17,24 @@ const RecentDepositsWithdraws = () => {
       </h1>
 
       <div className="max-w-[346px] mx-auto flex justify-center items-center gap-4 px-4 py-2.5 border border-[#FFFFFF1A] rounded-full mb-6 sm:mb-16 relative z-30">
-        <button className="btn btn-primary w-full">Deposit</button>
-        <button className="btn-primary w-full border border-[#00E889]">
+        <button 
+          className={`w-full border border-[#00E889] py-3 px-6 rounded-full transition-all duration-300 ${
+            activeTab === "deposit" 
+              ? "btn btn-primary text-black " 
+              : "text-white  hover:bg-[#00E889] hover:text-black"
+          }`}
+          onClick={() => setActiveTab("deposit")}
+        >
+          Deposit
+        </button>
+        <button 
+          className={`w-full border border-[#00E889] py-3 px-6 rounded-full transition-all duration-300 ${
+            activeTab === "withdraw" 
+              ? "btn btn-primary text-black " 
+              : "text-white  hover:bg-[#00E889] hover:text-black"
+          }`}
+          onClick={() => setActiveTab("withdraw")}
+        >
           Withdraw
         </button>
       </div>
