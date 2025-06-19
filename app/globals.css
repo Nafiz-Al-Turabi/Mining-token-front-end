@@ -114,6 +114,42 @@ body {
   background:linear-gradient(180deg, #000302f6 81.09%, #00110aee 100%)
 }
 
+.custom-pagination {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  padding-top: 2rem;
+}
+
+.page-item {
+  list-style: none;
+}
+
+.page-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  color: #68b0d4;
+  font-weight: 500;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.page-link:hover {
+  background-color: #162e26;
+}
+
+.active .page-link {
+  background: linear-gradient(180deg, #00e889 0%, #00824d 100%, #008750 100%);
+  color: #fff;
+  border-color: #00e889;
+}
+
 /* Shadcn UI */
 
 @theme inline {

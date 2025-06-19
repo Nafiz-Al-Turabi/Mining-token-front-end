@@ -2,9 +2,14 @@
 import ConfigurableTable, {
   TableColumn,
 } from "@/components/ui/Tables/ConfigurableTable/ConfigurableTable";
-import React from "react";
+import React, { useState } from "react";
+import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
+import ReactPaginate from "react-paginate";
 
 const OrdersList = () => {
+  const [currentPage, setCurrentPage] = useState(0);
+  const itemsPerPage = 3;
+
   const formatStatus = (status: string) => {
     const lowerStatus = status.toLowerCase();
     let text = "";
@@ -64,6 +69,30 @@ const OrdersList = () => {
       countdown: 10,
       status: "completed",
     },
+    {
+      orderNo: "URDH17464808424703",
+      name: "Free weekly",
+      period: "1 week",
+      amount: 25.0,
+      countdown: 15,
+      status: "pending",
+    },
+    {
+      orderNo: "URDH17464838424703",
+      name: "Paid daily",
+      period: "3 days",
+      amount: 100.0,
+      countdown: 5,
+      status: "completed",
+    },
+    {
+      orderNo: "URDH17464808424753",
+      name: "Paid monthly",
+      period: "1 month",
+      amount: 120.0,
+      countdown: 3,
+      status: "pending",
+    },
   ];
 
   const formattedData = rawData.map((item) => ({
@@ -71,7 +100,7 @@ const OrdersList = () => {
     status: formatStatus(item.status),
     amount: amountFormatter(item.amount),
   }));
-  
+
   const columns: TableColumn[] = [
     { key: "orderNo", label: "Order No.", type: "text" },
     { key: "name", label: "Name", type: "text" },
@@ -90,14 +119,55 @@ const OrdersList = () => {
       </div>
     );
   };
+
+  const handlePageChange = (selectedPage: { selected: number }) => {
+    setCurrentPage(selectedPage.selected);
+  };
+
+  const paginatedData = formattedData.slice(
+    currentPage * itemsPerPage,
+    (currentPage + 1) * itemsPerPage
+  );
+
   return (
     <div>
       <h1 className="text-2xl font-bold pb-4">Orders</h1>
       <ConfigurableTable
         columns={columns}
-        data={formattedData}
+        data={paginatedData}
         actions={tableActions}
       />
+      <div className="flex justify-center items-center ">
+        <ReactPaginate
+          breakLabel="..."
+          nextLabel={
+            <button className="flex items-center gap-2">
+              <IoMdArrowRoundForward />
+            </button>
+          }
+          onPageChange={handlePageChange}
+          pageRangeDisplayed={2}
+          marginPagesDisplayed={1}
+          pageCount={Math.ceil(formattedData.length / itemsPerPage)}
+          forcePage={currentPage}
+          previousLabel={
+            <button className="flex items-center gap-2">
+              <IoMdArrowRoundBack />
+            </button>
+          }
+          renderOnZeroPageCount={null}
+          containerClassName="custom-pagination"
+          pageClassName="page-item"
+          pageLinkClassName="page-link"
+          previousClassName="page-item"
+          previousLinkClassName="page-link"
+          nextClassName="page-item"
+          nextLinkClassName="page-link"
+          breakClassName="page-item"
+          breakLinkClassName="page-link"
+          activeClassName="active"
+        />
+      </div>
     </div>
   );
 };
