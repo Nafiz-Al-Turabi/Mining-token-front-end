@@ -57,7 +57,7 @@ const OurBusinessModel = () => {
     <div className="bg-[#000503] py-0 lg:py-0 relative ">
       <img src="/images/bgSvgs/our business1.svg" alt="" className="hidden md:block md:absolute -top-46 left-0 z-10" />
       <img src="/images/bgSvgs/our business2.svg" alt="" className="hidden md:block md:absolute -top-96 right-0 z-10" />
-      <div className="max-w-[1320px] mx-auto pb-25 ">
+      <div className="max-w-[1320px] mx-auto pb-25 relative z-10 ">
         <div>
           <h1 className="sm:w-[20ch] mx-auto text-2xl sm:text-[2.5rem] lg:text-[4rem] font-semibold text-white text-center leading-[130%]">
             Our business{" "}
