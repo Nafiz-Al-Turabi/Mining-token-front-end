@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import noice from "@/public/noice.jpg";
 
-export default function NewsCard() {
+export default function NewsCard({ item }: { item: any }) {
   return (
     <div
       style={{
