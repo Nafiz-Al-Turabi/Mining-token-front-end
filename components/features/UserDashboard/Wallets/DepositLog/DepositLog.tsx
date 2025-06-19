@@ -71,6 +71,8 @@ const DepositLog = () => {
     { key: "remark", label: "Remark", type: "text" },
   ];
 
+  
+
   const tableActions = (row: any) => {
     return (
       <div>
