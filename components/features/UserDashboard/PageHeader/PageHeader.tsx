@@ -109,7 +109,7 @@ const PageHeader = () => {
           <p className="font-semibold text-white">Notifications</p>
           {message?.length > 0 ? (
             <div className="space-y-2">
-              {message.map((item: any) => (
+              {message?.map((item: any) => (
                 <MessageNotification
                   key={item.id}
                   message={item}
@@ -118,7 +118,7 @@ const PageHeader = () => {
               ))}
             </div>
           ) : (
-            <div className="text-center text-white">No notifications</div>
+            <div className="text-center text-white w-56 py-10">No notifications</div>
           )}
         </div>
       </div>

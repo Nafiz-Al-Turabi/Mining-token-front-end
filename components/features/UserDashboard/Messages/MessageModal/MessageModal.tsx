@@ -22,21 +22,21 @@ const MessageModal = ({ message, onClose }: MessageModalProps) => {
           <h2 className="text-xl font-bold mb-4 text-[#00e889]">
             {message.subject}
           </h2>
+          <div className="space-y-2 mb-4">
+            <div className=" flex items-center gap-2">
+              <p className="text-sm text-gray-400 mb-1">From:</p>
+              <p className="text-sm text-white">{message?.email}</p>
+            </div>
 
-          <div className="mb-4 flex items-center gap-2">
-            <p className="text-sm text-gray-400 mb-1">From:</p>
-            <p className="text-sm text-white">{message.email}</p>
+            <div className=" flex items-center gap-2">
+              <p className="text-sm text-gray-400 mb-1">Date:</p>
+              <p className="text-sm text-white">{message?.date || "N/A"}</p>
+            </div>
+            <div className=" flex items-center gap-2">
+              <p className="text-sm text-gray-400 mb-1">Name:</p>
+              <p className="text-sm text-white">{message?.Name || "N/A"}</p>
+            </div>
           </div>
-
-          <div className="mb-4 flex items-center gap-2">
-            <p className="text-sm text-gray-400 mb-1">Date:</p>
-            <p className="text-sm text-white">{message.date || "N/A"}</p>
-          </div>
-          <div className="mb-4 flex items-center gap-2">
-            <p className="text-sm text-gray-400 mb-1">Name:</p>
-            <p className="text-sm text-white">{message.Name || "N/A"}</p>
-          </div>
-
           <div>
             <p className="text-sm text-gray-400 mb-1">Message:</p>
             <p className="text-white">
