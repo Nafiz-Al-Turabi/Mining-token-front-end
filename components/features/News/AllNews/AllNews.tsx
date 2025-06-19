@@ -1,21 +1,24 @@
+"use client";
 import NewsCard from "@/components/ui/Cards/NewsCard";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const AllNews = () => {
-  const news = [
-    {
-      title: "Latest cloud mining industry news",
-      description: "HEXminer is your best choice for cryptocurrency investment",
-    },
-    {
-      title: "Latest cloud mining industry news",
-      description: "HEXminer is your best choice for cryptocurrency investment",
-    },
-    {
-      title: "Latest cloud mining industry news",
-      description: "HEXminer is your best choice for cryptocurrency investment",
-    },
-  ];
+  const [news, setNews] = useState([]);
+
+  useEffect(() => {
+    newsData();
+  }, []);
+
+  const newsData = async () => {
+    try {
+      const response = await fetch("/news.json");
+      const data = await response.json();
+      setNews(data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   return (
     <div className="bg-[#000503] py-10 lg:py-0 relative xl:py-[60px]">
       <div className="max-w-[1320px] mx-auto px-4">
@@ -29,8 +32,8 @@ const AllNews = () => {
           </h1>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-6 md:mt-16">
-          {news.map((item, index) => (
-            <NewsCard key={index} item={item} />
+          {news?.map((item: any) => (
+            <NewsCard key={item?.id} item={item} />
           ))}
         </div>
       </div>

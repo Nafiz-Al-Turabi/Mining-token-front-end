@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Bitcoin Surges Above $70,000 Amid Market Optimism",
+    "summary": "Bitcoin reached a new high above $70,000 as investor sentiment turned bullish after recent ETF approvals.",
+    "publishedAt": "2025-06-18T14:30:00Z",
+    "source": "CoinDesk",
+    "url": "https://www.coindesk.com/bitcoin-surges-70000"
+  },
+  {
+    "id": 2,
+    "title": "Ethereum 2.0 Upgrade Complete: What It Means for Investors",
+    "summary": "Ethereum successfully transitioned to its proof-of-stake consensus model, promising lower energy use and faster transactions.",
+    "publishedAt": "2025-06-17T10:00:00Z",
+    "source": "Decrypt",
+    "url": "https://decrypt.co/ethereum-2-upgrade-complete"
+  },
+  {
+    "id": 3,
+    "title": "SEC Delays Decision on New Crypto ETFs",
+    "summary": "The U.S. Securities and Exchange Commission has postponed decisions on several pending cryptocurrency exchange-traded fund proposals.",
+    "publishedAt": "2025-06-16T18:00:00Z",
+    "source": "Bloomberg",
+    "url": "https://www.bloomberg.com/crypto-etf-delay"
+  },
+  {
+    "id": 4,
+    "title": "Solana Hits 12-Month High After New Developer Partnerships",
+    "summary": "Solana's price spiked following announcements of partnerships with major blockchain app developers.",
+    "publishedAt": "2025-06-15T16:45:00Z",
+    "source": "CoinTelegraph",
+    "url": "https://cointelegraph.com/solana-12-month-high"
+  },
+  { 
+    "id": 5,
+    "title": "Ripple Wins Major Legal Battle Against SEC",
+    "summary": "Ripple Labs celebrated a court decision that ruled XRP is not a security, sending its token price soaring.",
+    "publishedAt": "2025-06-14T12:15:00Z",
+    "source": "Yahoo Finance",
+    "url": "https://finance.yahoo.com/ripple-sec-lawsuit-win"
+  },
+  {
+    "id": 6,
+    "title": "El Salvador Expands Bitcoin City Project With Volcano Energy",
+    "summary": "President Bukele announced new infrastructure investment in the country's ambitious Bitcoin City project powered by geothermal energy.",
+    "publishedAt": "2025-06-13T09:00:00Z",
+    "source": "Reuters",
+    "url": "https://www.reuters.com/el-salvador-bitcoin-city-update"
+  },
+  {
+    "id": 7,
+    "title": "Cardano Launches AI-Powered Smart Contracts",
+    "summary": "Cardano unveiled its integration of artificial intelligence to enhance smart contract capabilities on its blockchain.",
+    "publishedAt": "2025-06-12T13:30:00Z",
+    "source": "CryptoBriefing",
+    "url": "https://cryptobriefing.com/cardano-ai-smart-contracts"
+  },
+  {
+    "id": 8,
+    "title": "Binance Launches Zero-Fee Trading for Select Coin Pairs",
+    "summary": "Binance introduced zero-fee trading on key crypto pairs to attract more users amid rising competition.",
+    "publishedAt": "2025-06-11T11:20:00Z",
+    "source": "The Block",
+    "url": "https://www.theblock.co/binance-zero-fee"
+  },
+  {
+    "id": 9,
+    "title": "New Meme Coin 'DOGEX' Gains 400% in 24 Hours",
+    "summary": "A newly launched meme coin DOGEX surged over 400% shortly after its release, raising eyebrows in the crypto community.",
+    "publishedAt": "2025-06-10T17:50:00Z",
+    "source": "CryptoSlate",
+    "url": "https://cryptoslate.com/dogex-meme-coin-rally"
+  },
+  {
+    "id": 10,
+    "title": "India Proposes Digital Rupee Guidelines Amid Crypto Ban Concerns",
+    "summary": "India’s central bank released preliminary rules for its digital rupee, aiming to balance innovation and regulation.",
+    "publishedAt": "2025-06-09T08:45:00Z",
+    "source": "TechCrunch",
+    "url": "https://techcrunch.com/india-digital-rupee-guidelines"
+  }
+]

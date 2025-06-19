@@ -9,7 +9,7 @@ export default function NewsCard({ item }: { item: any }) {
       style={{
         backgroundImage: `linear-gradient(180deg, #010101f3 81.09%, #010101f3 100%), url(${noice.src})`,
       }}
-      className="bg-cover bg-center overflow-hidden  text-white shadow-lg rounded-2xl px-4 pb-8 pt-4 relative group border-b border-[#00e88744]"
+      className="bg-cover bg-center overflow-hidden  flex flex-col justify-between text-white shadow-lg rounded-2xl px-4 pb-8 pt-4 relative group border-b border-[#00e88744]"
     >
       <div className="h-[2px] w-[70%] bg-gradient-to-l from-[#00E88900] via-[#ffffff] to-[#00E88900] absolute -bottom-[1px] left-1/2 -translate-x-1/2"></div>
       <div
@@ -26,13 +26,12 @@ export default function NewsCard({ item }: { item: any }) {
           height={300}
           className="aspect-3/2 object-cover"
         />
+        <h3 className="text-base lg:text-2xl font-semibold leading-snug mb-4">
+          {item?.title}
+        </h3>
       </div>
       <div className="mt-4">
-        <h3 className="text-base lg:text-2xl font-semibold leading-snug mb-4">
-          Trump’s World Liberty Financial Proposes Integration with Aave for
-          DeFi Platform Launch
-        </h3>
-        <Link href="/news/trump-defi">
+        <Link href={`/news/${item?.id}`}>
           <span className="inline-block px-4 py-2 border border-[#00e889] rounded-full text-[#00e889] text-sm font-medium hover:bg-[#00e889] hover:text-black transition-all cursor-pointer relative z-10">
             Read More
           </span>
