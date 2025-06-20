@@ -14,11 +14,11 @@ const WhyChooseHEXminer = () => {
           HEXminer is your best choice for cryptocurrency investment
         </p>
       </div>
-      <div className="xl:-mt-32 2xl:-mt-40 relative z-20">
+      <div className="max-w-[1320px] mx-auto relative z-20 px-4">
         <img
-          src="/why-choose.svg"
+          src="/why-choose2.svg"
           alt="why choose hex miner"
-          className="w-full h-full object-cover"
+          className=" lg:max-w-[1100px] aspect-square"
         />
       </div>
     </div>
