@@ -5,9 +5,12 @@ import ConfigurableTable, {
 import React, { useState } from "react";
 import { IoMdArrowRoundBack, IoMdArrowRoundForward } from "react-icons/io";
 import ReactPaginate from "react-paginate";
+import OrderDetailsModal from "../OrderDetailsModal/OrderDetailsModal";
 
 const OrdersList = () => {
   const [currentPage, setCurrentPage] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedOrder, setSelectedOrder] = useState<any>(null);
   const itemsPerPage = 3;
 
   const formatStatus = (status: string) => {
@@ -110,10 +113,16 @@ const OrdersList = () => {
     { key: "status", label: "Status", type: "text" },
   ];
 
-  const tableActions = () => {
+  const tableActions = (rowData: any) => {
     return (
       <div>
-        <button className="px-8 py-2 bg-red-600/20 text-red-600 rounded-lg cursor-pointer">
+        <button 
+          className="px-8 py-2 bg-red-600/20 text-red-600 rounded-lg cursor-pointer hover:bg-red-600/30 transition-colors duration-200"
+          onClick={() => {
+            setSelectedOrder(rowData);
+            setIsModalOpen(true);
+          }}
+        >
           Details
         </button>
       </div>
@@ -168,6 +177,16 @@ const OrdersList = () => {
           activeClassName="active"
         />
       </div>
+
+      {/* Order Details Modal */}
+      <OrderDetailsModal
+        isOpen={isModalOpen}
+        onClose={() => {
+          setIsModalOpen(false);
+          setSelectedOrder(null);
+        }}
+        orderData={selectedOrder}
+      />
     </div>
   );
 };
